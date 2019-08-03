@@ -7,9 +7,9 @@ namespace TouristGuide_Core
     public class Sight
     {
         public int SightId { get; set; }
-        public string Name { get; private set; }
+        public string Name { get; set; }
         public string Photo { get; set; }
-        public string Directions { get; private set; }
+        public string Location { get; set; }
         public int VillageId { get; set; }
     }
 }

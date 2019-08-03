@@ -9,7 +9,7 @@ namespace TouristGuide_Core
         public int BeachId { get; set; }
         public string Name { get; private set; }
         public string Photo { get; set; }
-        public string Directions { get; private set; }
+        public string Location { get; private set; }
         public int VillageId { get; set; }
     }
 }
