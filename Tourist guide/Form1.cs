@@ -31,7 +31,6 @@ namespace Tourist_guide
 
             if (reader.HasRows)
             {
-                MessageBox.Show("You are in!");
                 connection.Close();
                 this.Hide();
                 StartPage startPage = new StartPage();
@@ -52,6 +51,13 @@ namespace Tourist_guide
         private void Form1_Load(object sender, EventArgs e)
         {
             connection = new OleDbConnection(connectionString);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartPage startPage = new StartPage();
+            startPage.Show();
         }
     }
 }
