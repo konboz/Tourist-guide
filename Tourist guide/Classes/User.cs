@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TouristGuide_Core
+namespace TouristGuide
 {
     public class User
     {

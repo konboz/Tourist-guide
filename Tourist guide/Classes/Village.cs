@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TouristGuide_Core
+namespace TouristGuide
 {
     class Village
     {
         public int VillageId { get; set; }
-        public string Name { get; set; }
+        public string VillageName { get; set; }
         public string Photo { get; set; }
         public string Location { get; set; }
         public List<Food> Restaurants { get; set; }
