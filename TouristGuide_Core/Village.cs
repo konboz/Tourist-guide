@@ -8,7 +8,7 @@ namespace TouristGuide_Core
     {
         public int VillageId { get; set; }
         public string Name { get; private set; }
-        public string Photos { get; set; }
+        public string Photo { get; set; }
         public string Directions { get; private set; }
         public List<Food> Restaurants { get; private set; }
         public List<Hotel> Hotels { get; private set; }

@@ -18,16 +18,12 @@ namespace TouristGuide_Core
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<User>();
-            modelBuilder.Entity<Food>()
-                .HasKey(bp => new { bp.VillageId });
-            modelBuilder.Entity<Bar>()
-                .HasKey(bp => new { bp.VillageId });
-            modelBuilder.Entity<Hotel>()
-                .HasKey(bp => new { bp.VillageId });
-            modelBuilder.Entity<Beach>()
-                .HasKey(bp => new { bp.VillageId});
-            modelBuilder.Entity<Sight>()
-                .HasKey(bp => new { bp.VillageId });
+            modelBuilder.Entity<Food>();
+            modelBuilder.Entity<Bar>();
+            modelBuilder.Entity<Hotel>();
+            modelBuilder.Entity<Beach>();
+            modelBuilder.Entity<Sight>();
+            modelBuilder.Entity<UserHistory>();
             modelBuilder.Entity<Village>();
             
         }
