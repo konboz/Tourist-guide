@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tourist guide", "Tourist guide\Tourist guide.csproj", "{4ABA4061-E866-43EC-AD1A-CF22BF74D42E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E56B5817-5BBD-43B8-A1DC-BD6D89BEB0DB} = {E56B5817-5BBD-43B8-A1DC-BD6D89BEB0DB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouristGuide_Core", "TouristGuide_Core\TouristGuide_Core.csproj", "{E56B5817-5BBD-43B8-A1DC-BD6D89BEB0DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{4ABA4061-E866-43EC-AD1A-CF22BF74D42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ABA4061-E866-43EC-AD1A-CF22BF74D42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ABA4061-E866-43EC-AD1A-CF22BF74D42E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E56B5817-5BBD-43B8-A1DC-BD6D89BEB0DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E56B5817-5BBD-43B8-A1DC-BD6D89BEB0DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E56B5817-5BBD-43B8-A1DC-BD6D89BEB0DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E56B5817-5BBD-43B8-A1DC-BD6D89BEB0DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
