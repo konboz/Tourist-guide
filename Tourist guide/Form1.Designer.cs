@@ -1,4 +1,4 @@
-﻿namespace Tourist_guide
+﻿namespace TouristGuide
 {
     partial class Form1
     {

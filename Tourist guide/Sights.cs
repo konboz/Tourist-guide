@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tourist_guide
+namespace TouristGuide
 {
     public partial class Sights : Form
     {

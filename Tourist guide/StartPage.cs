@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tourist_guide
+namespace TouristGuide
 {
     public partial class StartPage : Form
     {
@@ -34,6 +34,13 @@ namespace Tourist_guide
         private void button7_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Sights sights = new Sights();
+            sights.Show();
+            this.Hide();
         }
     }
 }

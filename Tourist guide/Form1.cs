@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
-namespace Tourist_guide
+namespace TouristGuide
 {
     public partial class Form1 : Form
     {

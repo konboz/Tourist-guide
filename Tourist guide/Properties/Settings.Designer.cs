@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tourist_guide.Properties
+namespace TouristGuide.Properties
 {
 
 
