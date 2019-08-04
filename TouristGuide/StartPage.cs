@@ -42,5 +42,12 @@ namespace TouristGuide
             sights.Show();
             this.Hide();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Sights sights = new Sights();
+            sights.Show();
+            this.Hide();
+        }
     }
 }
