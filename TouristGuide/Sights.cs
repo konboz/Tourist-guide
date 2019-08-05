@@ -12,9 +12,15 @@ namespace TouristGuide
 {
     public partial class Sights : Form
     {
-        public Sights()
+        public Sights(string villageName, string user)
         {
             InitializeComponent();
+            label1.Text = villageName;
+            var labels = new List<Label> { label2, label3, label4, label5, label6, label7 };
+            for (int i = 0; i < 3; i++)
+            {
+                labels[i].Visible = true;
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -27,6 +33,11 @@ namespace TouristGuide
             Sight sight = new Sight(label1.Text);
             sight.Show();
             this.Hide();
+        }
+
+        private void Sights_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

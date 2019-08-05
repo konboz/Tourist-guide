@@ -26,7 +26,13 @@ namespace TouristGuide
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Sights sights = new Sights();
+            Form3 sights = new Form3("sight", "kostas");
+            sights.Show();
+            this.Hide();
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form3 sights = new Form3("sight", "kostas");
             sights.Show();
             this.Hide();
         }
@@ -38,16 +44,14 @@ namespace TouristGuide
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Sights sights = new Sights();
+            Form3 sights = new Form3("sight", "kostas");
             sights.Show();
             this.Hide();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            Sights sights = new Sights();
-            sights.Show();
-            this.Hide();
+
         }
     }
 }
