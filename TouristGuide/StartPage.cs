@@ -32,7 +32,7 @@ namespace TouristGuide
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form3 sights = new Form3("sight", "kostas");
+            Form3 sights = new Form3("Αξιοθέατα", "kostas");
             sights.Show();
             this.Hide();
         }

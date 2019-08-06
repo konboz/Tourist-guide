@@ -19,6 +19,7 @@ namespace TouristGuide
             InitializeComponent();
             this.contentType = contentType;
             this.user = user;
+            label5.Text = contentType;
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -39,7 +40,7 @@ namespace TouristGuide
 
         private void Label1_Click(object sender, EventArgs e)
         {
-            if (contentType == "sight")
+            if (contentType == "Αξιοθέατα")
             {
                 Sights sights = new Sights(label1.Text, user);
                 sights.Show();
