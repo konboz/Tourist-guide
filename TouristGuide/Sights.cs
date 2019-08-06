@@ -17,6 +17,7 @@ namespace TouristGuide
             InitializeComponent();
             label1.Text = villageName;
             var labels = new List<Label> { label2, label3, label4, label5, label6, label7 };
+            //call database
             for (int i = 0; i < 3; i++)
             {
                 labels[i].Visible = true;
