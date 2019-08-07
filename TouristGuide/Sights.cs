@@ -13,21 +13,17 @@ namespace TouristGuide
 {
     public partial class Sights : Form
     {
-        string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=TouristGuideDb.mdb";
-        OleDbConnection connection;
-        public Sights(string villageName, string user)
+        
+        public Sights(string villageName, int counter, string user)
         {
             InitializeComponent();
             label1.Text = villageName;
             var labels = new List<Label> { label2, label3, label4, label5, label6, label7 };
-            connection.Open();
-            string query = "SELECT SightName FROM Sight WHERE VillageName LIKE(\"" + villageName + "\")";
-            OleDbCommand command = new OleDbCommand(query, connection);
-            OleDbDataReader reader = command.ExecuteReader();
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < counter; i++)
             {
                 labels[i].Visible = true;
+                
             }
         }
 
@@ -39,13 +35,13 @@ namespace TouristGuide
         private void label1_Click(object sender, EventArgs e)
         {
             Sight sight = new Sight(label1.Text);
-            sight.Show();
+            sight.Show();           
             this.Hide();
         }
 
         private void Sights_Load(object sender, EventArgs e)
         {
-           
+            
         }
     }
 }
