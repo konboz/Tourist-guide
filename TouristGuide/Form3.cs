@@ -14,6 +14,7 @@ namespace TouristGuide
 {
     public partial class Form3 : Form
     {
+        public Form form;
         public string contentType;
         public string user;
 
@@ -28,16 +29,21 @@ namespace TouristGuide
 
                 photos = Directory.GetFiles(photoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
                 info = Directory.GetFiles(infoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
-                Sights sights = new Sights(village, contentType, photos, info, user);
+                Sights sights = new Sights(this, village, contentType, photos, info, user);
                 sights.Show();
                 Hide();
             }
         }
-        public Form3(string contentType, string user)
+        public Form3(Form form, string contentType, string user)
         {
             InitializeComponent();
+            this.form = form;
             this.contentType = contentType;
             this.user = user;
+            pictureBox1.ImageLocation = "Data/ΧΩΡΑ/ΧΩΡΑ.jpg";
+            pictureBox2.ImageLocation = "Data/ΚΑΤΑΠΟΛΑ/ΚΑΤΑΠΟΛΑ.jpg";
+            pictureBox3.ImageLocation = "Data/ΑΙΓΙΑΛΗ/ΑΙΓΙΑΛΗ.jpg";
+            pictureBox4.ImageLocation = "Data/ΚΑΤΩ ΜΕΡΙΑ/ΚΑΤΩ ΜΕΡΙΑ.jpg";
             label5.Text = contentType;
         }
 
@@ -74,6 +80,17 @@ namespace TouristGuide
         private void Label3_Click(object sender, EventArgs e)
         {
             FormCreator(label3.Text);
+        }
+
+        private void ΠίσωToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            form.Show();
+            Hide();
+        }
+
+        private void ΈξοδοςToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

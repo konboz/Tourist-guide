@@ -15,11 +15,14 @@ namespace TouristGuide
     public partial class Sights : Form
     {
         public List<Sight> sights = new List<Sight>();
-        public Sights(string villageName, string contentType, List<string> photos, List<string> info, string user)
+        public Form form;
+        public Sights(Form form, string villageName, string contentType, List<string> photos, List<string> info, string user)
         {
             InitializeComponent();
+            this.form = form;
             label7.Text = contentType + " - " + villageName;
             var labels = new List<Label> { label1, label2, label3, label4, label5, label6 };
+            var pictures = new List<PictureBox> { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6 };
             int i = 0;
 
             foreach (string item in info)
@@ -29,16 +32,18 @@ namespace TouristGuide
                 sight.photo = "Data/" + villageName + "/" + contentType + "/photos/" + photos[i];
                 sights.Add(sight);
                 labels[i].Visible = true;
-                labels[i].Text = Path.GetFileNameWithoutExtension(item);
+                pictures[i].Enabled = true;
+                pictures[i].Visible = true;
+                labels[i].Text = Path.GetFileNameWithoutExtension(sight.info);
+                pictures[i].ImageLocation = sight.photo;
                 i++;
-
             }
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            SightForm sight = new SightForm(sights[0]);
+            SightForm sight = new SightForm(this, sights[0]);
             sight.Show();
             this.Hide();
         }
@@ -55,14 +60,90 @@ namespace TouristGuide
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            SightForm sight = new SightForm(this, sights[1]);
+            sight.Show();
+            this.Hide();
         }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-            SightForm sight = new SightForm(sights[0]);
+            SightForm sight = new SightForm(this, sights[0]);
             sight.Show();
             this.Hide();
+        }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            SightForm sight = new SightForm(this, sights[1]);
+            sight.Show();
+            this.Hide();
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+            SightForm sight = new SightForm(this, sights[2]);
+            sight.Show();
+            this.Hide();
+        }
+
+        private void PictureBox3_Click(object sender, EventArgs e)
+        {
+            SightForm sight = new SightForm(this, sights[2]);
+            sight.Show();
+            this.Hide();
+        }
+
+        private void PictureBox4_Click(object sender, EventArgs e)
+        {
+            SightForm sight = new SightForm(this, sights[3]);
+            sight.Show();
+            this.Hide();
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+            SightForm sight = new SightForm(this, sights[3]);
+            sight.Show();
+            this.Hide();
+        }
+
+        private void PictureBox5_Click(object sender, EventArgs e)
+        {
+            SightForm sight = new SightForm(this, sights[4]);
+            sight.Show();
+            this.Hide();
+        }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+            SightForm sight = new SightForm(this, sights[4]);
+            sight.Show();
+            this.Hide();
+        }
+
+        private void PictureBox6_Click(object sender, EventArgs e)
+        {
+            SightForm sight = new SightForm(this, sights[5]);
+            sight.Show();
+            this.Hide();
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+            SightForm sight = new SightForm(this, sights[5]);
+            sight.Show();
+            this.Hide();
+        }
+
+        private void ΠίσωToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            form.Show();
+            Hide();
+        }
+
+        private void ΈξοδοςToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

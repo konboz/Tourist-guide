@@ -30,19 +30,14 @@ namespace TouristGuide
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form3 sights = new Form3("ΑΞΙΟΘΕΑΤΑ", "kostas");
+            Form3 sights = new Form3(this, "ΑΞΙΟΘΕΑΤΑ", "kostas");
             sights.Show();
             this.Hide();
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form3 sights = new Form3("ΑΞΙΟΘΕΑΤΑ", "kostas");
+            Form3 sights = new Form3(this, "ΑΞΙΟΘΕΑΤΑ", "kostas");
             sights.Show();
             this.Hide();
         }
@@ -50,6 +45,11 @@ namespace TouristGuide
         private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
 
+        }
+
+        private void ΈξοδοςToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
