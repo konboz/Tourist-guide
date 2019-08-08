@@ -32,6 +32,11 @@ namespace TouristGuide
             if (reader.HasRows)
             {
                 connection.Close();
+                var user = new User()
+                {
+                    Email = email
+                };
+                GlobalVariables.connectedUser = user;
                 this.Hide();
                 StartPage startPage = new StartPage();
                 startPage.Show(); 
@@ -57,6 +62,8 @@ namespace TouristGuide
         {
             this.Hide();
             StartPage startPage = new StartPage();
+            var user = new User();
+            GlobalVariables.connectedUser = user;
             startPage.Show();
         }
     }

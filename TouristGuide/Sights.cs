@@ -16,6 +16,19 @@ namespace TouristGuide
     {
         public List<Sight> sights = new List<Sight>();
         public Form form;
+
+        bool UserValidation()
+        {
+            if (GlobalVariables.connectedUser.Email != null)
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Πρέπει να συνδεθείτε για να δείτε αυτήν την πληροφορία!");
+                return false;
+            }
+        }
         public Sights(Form form, string villageName, string contentType, List<string> photos, List<string> info, string user)
         {
             InitializeComponent();
@@ -43,14 +56,17 @@ namespace TouristGuide
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            SightForm sight = new SightForm(this, sights[0]);
-            sight.Show();
-            this.Hide();
+            if (UserValidation())
+            {
+                SightForm sight = new SightForm(this, sights[0]);
+                sight.Show();
+                this.Hide();
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Sights_Load(object sender, EventArgs e)
@@ -60,79 +76,112 @@ namespace TouristGuide
 
         private void label2_Click(object sender, EventArgs e)
         {
-            SightForm sight = new SightForm(this, sights[1]);
-            sight.Show();
-            this.Hide();
+            if (UserValidation())
+            {
+                SightForm sight = new SightForm(this, sights[1]);
+                sight.Show();
+                this.Hide();
+            }
         }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-            SightForm sight = new SightForm(this, sights[0]);
-            sight.Show();
-            this.Hide();
+            if (UserValidation())
+            {
+                SightForm sight = new SightForm(this, sights[0]);
+                sight.Show();
+                this.Hide();
+            }
         }
 
         private void PictureBox2_Click(object sender, EventArgs e)
         {
-            SightForm sight = new SightForm(this, sights[1]);
-            sight.Show();
-            this.Hide();
+            if (UserValidation())
+            {
+                SightForm sight = new SightForm(this, sights[1]);
+                sight.Show();
+                this.Hide();
+            }
         }
 
         private void Label3_Click(object sender, EventArgs e)
         {
-            SightForm sight = new SightForm(this, sights[2]);
-            sight.Show();
-            this.Hide();
+            if (UserValidation())
+            {
+                SightForm sight = new SightForm(this, sights[2]);
+                sight.Show();
+                this.Hide();
+            }
         }
 
         private void PictureBox3_Click(object sender, EventArgs e)
         {
-            SightForm sight = new SightForm(this, sights[2]);
-            sight.Show();
-            this.Hide();
+            if (UserValidation())
+            {
+                SightForm sight = new SightForm(this, sights[2]);
+                sight.Show();
+                this.Hide();
+            }
         }
 
         private void PictureBox4_Click(object sender, EventArgs e)
         {
-            SightForm sight = new SightForm(this, sights[3]);
-            sight.Show();
-            this.Hide();
+            if (UserValidation())
+            {
+                SightForm sight = new SightForm(this, sights[3]);
+                sight.Show();
+                this.Hide();
+            }
         }
 
         private void Label4_Click(object sender, EventArgs e)
         {
-            SightForm sight = new SightForm(this, sights[3]);
-            sight.Show();
-            this.Hide();
+            if (UserValidation())
+            {
+                SightForm sight = new SightForm(this, sights[3]);
+                sight.Show();
+                this.Hide();
+            }
         }
 
         private void PictureBox5_Click(object sender, EventArgs e)
         {
-            SightForm sight = new SightForm(this, sights[4]);
-            sight.Show();
-            this.Hide();
+            if (UserValidation())
+            {
+                SightForm sight = new SightForm(this, sights[4]);
+                sight.Show();
+                this.Hide();
+            }
         }
 
         private void Label5_Click(object sender, EventArgs e)
         {
-            SightForm sight = new SightForm(this, sights[4]);
-            sight.Show();
-            this.Hide();
+            if (UserValidation())
+            {
+                SightForm sight = new SightForm(this, sights[4]);
+                sight.Show();
+                this.Hide();
+            }
         }
 
         private void PictureBox6_Click(object sender, EventArgs e)
         {
-            SightForm sight = new SightForm(this, sights[5]);
-            sight.Show();
-            this.Hide();
+            if (UserValidation())
+            {
+                SightForm sight = new SightForm(this, sights[5]);
+                sight.Show();
+                this.Hide();
+            }
         }
 
         private void Label6_Click(object sender, EventArgs e)
         {
-            SightForm sight = new SightForm(this, sights[5]);
-            sight.Show();
-            this.Hide();
+            if (UserValidation())
+            {
+                SightForm sight = new SightForm(this, sights[5]);
+                sight.Show();
+                this.Hide();
+            }
         }
 
         private void ΠίσωToolStripMenuItem_Click(object sender, EventArgs e)
