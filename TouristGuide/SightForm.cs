@@ -17,6 +17,7 @@ namespace TouristGuide
         public SightForm(Form form, Sight sight)
         {
             InitializeComponent();
+            Text = Path.GetFileNameWithoutExtension(sight.info);
             label1.Text = Path.GetFileNameWithoutExtension(sight.info);
             pictureBox1.ImageLocation = sight.photo;
             richTextBox1.Text = richTextBox1.Text = File.ReadAllText(sight.info);
@@ -32,6 +33,22 @@ namespace TouristGuide
         private void ΈξοδοςToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void ΑποθήκευσηΠληροφοριώνToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string exportLocation;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                exportLocation = saveFileDialog1.FileName;
+                File.WriteAllText(exportLocation, richTextBox1.Text);
+            }
+        }
+
+        private void SightForm_Load(object sender, EventArgs e)
+        {
+            Utilities.LoadHistoryMenu(ιστορικόToolStripMenuItem);
+            
         }
     }
 }

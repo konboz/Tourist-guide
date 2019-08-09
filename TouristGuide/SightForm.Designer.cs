@@ -35,6 +35,9 @@
             this.μενούToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.πίσωToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.έξοδοςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.αποθήκευσηΠληροφοριώνToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.ιστορικόToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +56,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(575, 266);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(424, 273);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -63,7 +66,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(47, 79);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(511, 244);
@@ -85,6 +88,8 @@
             // 
             this.μενούToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.πίσωToolStripMenuItem,
+            this.αποθήκευσηΠληροφοριώνToolStripMenuItem,
+            this.ιστορικόToolStripMenuItem,
             this.έξοδοςToolStripMenuItem});
             this.μενούToolStripMenuItem.Name = "μενούToolStripMenuItem";
             this.μενούToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
@@ -93,16 +98,34 @@
             // πίσωToolStripMenuItem
             // 
             this.πίσωToolStripMenuItem.Name = "πίσωToolStripMenuItem";
-            this.πίσωToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.πίσωToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.πίσωToolStripMenuItem.Text = "Πίσω";
             this.πίσωToolStripMenuItem.Click += new System.EventHandler(this.ΠίσωToolStripMenuItem_Click);
             // 
             // έξοδοςToolStripMenuItem
             // 
             this.έξοδοςToolStripMenuItem.Name = "έξοδοςToolStripMenuItem";
-            this.έξοδοςToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.έξοδοςToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.έξοδοςToolStripMenuItem.Text = "Έξοδος";
             this.έξοδοςToolStripMenuItem.Click += new System.EventHandler(this.ΈξοδοςToolStripMenuItem_Click);
+            // 
+            // αποθήκευσηΠληροφοριώνToolStripMenuItem
+            // 
+            this.αποθήκευσηΠληροφοριώνToolStripMenuItem.Name = "αποθήκευσηΠληροφοριώνToolStripMenuItem";
+            this.αποθήκευσηΠληροφοριώνToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.αποθήκευσηΠληροφοριώνToolStripMenuItem.Text = "Αποθήκευση πληροφοριών";
+            this.αποθήκευσηΠληροφοριώνToolStripMenuItem.Click += new System.EventHandler(this.ΑποθήκευσηΠληροφοριώνToolStripMenuItem_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "txt";
+            this.saveFileDialog1.Filter = "Text files | *.txt";
+            // 
+            // ιστορικόToolStripMenuItem
+            // 
+            this.ιστορικόToolStripMenuItem.Name = "ιστορικόToolStripMenuItem";
+            this.ιστορικόToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.ιστορικόToolStripMenuItem.Text = "Ιστορικό";
             // 
             // SightForm
             // 
@@ -114,9 +137,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SightForm";
             this.Text = "SightForm";
+            this.Load += new System.EventHandler(this.SightForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -134,5 +158,8 @@
         private System.Windows.Forms.ToolStripMenuItem μενούToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem πίσωToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem έξοδοςToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem αποθήκευσηΠληροφοριώνToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem ιστορικόToolStripMenuItem;
     }
 }

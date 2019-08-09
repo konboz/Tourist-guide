@@ -37,6 +37,8 @@ namespace TouristGuide
                     Email = email
                 };
                 GlobalVariables.connectedUser = user;
+                var sessionHistory = new UserHistory();
+                GlobalVariables.history = sessionHistory;
                 this.Hide();
                 StartPage startPage = new StartPage();
                 startPage.Show(); 
@@ -64,8 +66,6 @@ namespace TouristGuide
             StartPage startPage = new StartPage();
             var user = new User();
             GlobalVariables.connectedUser = user;
-            var sessionHistory = new UserHistory();
-            GlobalVariables.history = sessionHistory;
             startPage.Show();
         }
     }

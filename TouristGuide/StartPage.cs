@@ -30,16 +30,22 @@ namespace TouristGuide
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form3 sights = new Form3(this, "ΑΞΙΟΘΕΑΤΑ");
-            sights.Show();
+            Form3 villages = new Form3(this, "ΑΞΙΟΘΕΑΤΑ");
+
+            if (GlobalVariables.history != null)
+            {
+                GlobalVariables.history.VisitedForms.Add(villages);
+            }
+            Utilities.HistoryAdd(villages);
+            villages.Show();
             this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form3 sights = new Form3(this, "ΑΞΙΟΘΕΑΤΑ");
-            GlobalVariables.history.VisitedForms.Add(sights);
-            sights.Show();
+            Form3 villages = new Form3(this, "ΑΞΙΟΘΕΑΤΑ");
+            Utilities.HistoryAdd(villages);
+            villages.Show();
             this.Hide();
         }
 

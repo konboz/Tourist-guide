@@ -29,6 +29,7 @@ namespace TouristGuide
                 photos = Directory.GetFiles(photoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
                 info = Directory.GetFiles(infoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
                 Sights sights = new Sights(this, village, contentType, photos, info);
+                Utilities.HistoryAdd(sights);
                 sights.Show();
                 Hide();
             }
@@ -42,6 +43,7 @@ namespace TouristGuide
             pictureBox2.ImageLocation = "Data/ΚΑΤΑΠΟΛΑ/ΚΑΤΑΠΟΛΑ.jpg";
             pictureBox3.ImageLocation = "Data/ΑΙΓΙΑΛΗ/ΑΙΓΙΑΛΗ.jpg";
             pictureBox4.ImageLocation = "Data/ΚΑΤΩ ΜΕΡΙΑ/ΚΑΤΩ ΜΕΡΙΑ.jpg";
+            Text = contentType;
             label5.Text = contentType;
         }
 
