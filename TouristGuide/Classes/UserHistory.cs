@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Forms;
 
 namespace TouristGuide
 {
     public class UserHistory
     {
-        public int UserHistoryId { get; set; }
-        public int UserId { get; set; }
-        public string VisitedForm { get; set; }
+        public List<Form> VisitedForms { get; set; }
 
+        public UserHistory()
+        {
+            VisitedForms = new List<Form>();
+        }
     }
 }

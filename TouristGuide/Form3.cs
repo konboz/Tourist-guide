@@ -16,7 +16,6 @@ namespace TouristGuide
     {
         public Form form;
         public string contentType;
-        public string user;
 
         void FormCreator(string village)
         {
@@ -29,17 +28,16 @@ namespace TouristGuide
 
                 photos = Directory.GetFiles(photoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
                 info = Directory.GetFiles(infoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
-                Sights sights = new Sights(this, village, contentType, photos, info, user);
+                Sights sights = new Sights(this, village, contentType, photos, info);
                 sights.Show();
                 Hide();
             }
         }
-        public Form3(Form form, string contentType, string user)
+        public Form3(Form form, string contentType)
         {
             InitializeComponent();
             this.form = form;
             this.contentType = contentType;
-            this.user = user;
             pictureBox1.ImageLocation = "Data/ΧΩΡΑ/ΧΩΡΑ.jpg";
             pictureBox2.ImageLocation = "Data/ΚΑΤΑΠΟΛΑ/ΚΑΤΑΠΟΛΑ.jpg";
             pictureBox3.ImageLocation = "Data/ΑΙΓΙΑΛΗ/ΑΙΓΙΑΛΗ.jpg";

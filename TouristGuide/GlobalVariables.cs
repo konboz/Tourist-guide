@@ -9,5 +9,7 @@ namespace TouristGuide
     public static class GlobalVariables
     {
         public static User connectedUser;
+
+        public static UserHistory history;
     }
 }

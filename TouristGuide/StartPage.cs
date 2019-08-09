@@ -30,14 +30,15 @@ namespace TouristGuide
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form3 sights = new Form3(this, "ΑΞΙΟΘΕΑΤΑ", "kostas");
+            Form3 sights = new Form3(this, "ΑΞΙΟΘΕΑΤΑ");
             sights.Show();
             this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form3 sights = new Form3(this, "ΑΞΙΟΘΕΑΤΑ", "kostas");
+            Form3 sights = new Form3(this, "ΑΞΙΟΘΕΑΤΑ");
+            GlobalVariables.history.VisitedForms.Add(sights);
             sights.Show();
             this.Hide();
         }

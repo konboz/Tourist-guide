@@ -29,7 +29,7 @@ namespace TouristGuide
                 return false;
             }
         }
-        public Sights(Form form, string villageName, string contentType, List<string> photos, List<string> info, string user)
+        public Sights(Form form, string villageName, string contentType, List<string> photos, List<string> info)
         {
             InitializeComponent();
             this.form = form;
