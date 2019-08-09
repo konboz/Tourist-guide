@@ -60,15 +60,10 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[0]);
-                Utilities.HistoryAdd(sight);
+                Utilities.HistoryAdd(this);
                 sight.Show();
-                this.Hide();
+                Hide();
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Sights_Load(object sender, EventArgs e)
@@ -81,9 +76,9 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[1]);
-                Utilities.HistoryAdd(sight);
+                Utilities.HistoryAdd(this);
                 sight.Show();
-                this.Hide();
+                Hide();
             }
         }
 
@@ -92,9 +87,9 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[0]);
-                Utilities.HistoryAdd(sight);
+                Utilities.HistoryAdd(this);
                 sight.Show();
-                this.Hide();
+                Hide();
             }
         }
 
@@ -103,9 +98,9 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[1]);
-                Utilities.HistoryAdd(sight);
+                Utilities.HistoryAdd(this);
                 sight.Show();
-                this.Hide();
+                Hide();
             }
         }
 
@@ -114,9 +109,9 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[2]);
-                Utilities.HistoryAdd(sight);
+                Utilities.HistoryAdd(this);
                 sight.Show();
-                this.Hide();
+                Hide();
             }
         }
 
@@ -125,9 +120,9 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[2]);
-                Utilities.HistoryAdd(sight);
+                Utilities.HistoryAdd(this);
                 sight.Show();
-                this.Hide();
+                Hide();
             }
         }
 
@@ -136,9 +131,9 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[3]);
-                Utilities.HistoryAdd(sight);
+                Utilities.HistoryAdd(this);
                 sight.Show();
-                this.Hide();
+                Hide();
             }
         }
 
@@ -147,9 +142,9 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[3]);
-                Utilities.HistoryAdd(sight);
+                Utilities.HistoryAdd(this);
                 sight.Show();
-                this.Hide();
+                Hide();
             }
         }
 
@@ -158,9 +153,9 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[4]);
-                Utilities.HistoryAdd(sight);
+                Utilities.HistoryAdd(this);
                 sight.Show();
-                this.Hide();
+                Hide();
             }
         }
 
@@ -169,9 +164,9 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[4]);
-                Utilities.HistoryAdd(sight);
+                Utilities.HistoryAdd(this);
                 sight.Show();
-                this.Hide();
+                Hide();
             }
         }
 
@@ -180,9 +175,9 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[5]);
-                Utilities.HistoryAdd(sight);
+                Utilities.HistoryAdd(this);
                 sight.Show();
-                this.Hide();
+                Hide();
             }
         }
 
@@ -191,14 +186,15 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[5]);
-                Utilities.HistoryAdd(sight);
+                Utilities.HistoryAdd(this);
                 sight.Show();
-                this.Hide();
+                Hide();
             }
         }
 
         private void ΠίσωToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Utilities.HistoryAdd(this);
             form.Show();
             Hide();
         }

@@ -17,6 +17,7 @@ namespace TouristGuide
             InitializeComponent();
             pictureBox7.ImageLocation = "Photos/trail.jpg";
             pictureBox1.ImageLocation = "Photos/sight1.png";
+            Text = "ΑΡΧΙΚΗ ΣΕΛΙΔΑ";
         }
 
         private void StartPage_Load(object sender, EventArgs e)
@@ -24,29 +25,20 @@ namespace TouristGuide
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
         private void button1_Click_1(object sender, EventArgs e)
         {
             Form3 villages = new Form3(this, "ΑΞΙΟΘΕΑΤΑ");
-
-            if (GlobalVariables.history != null)
-            {
-                GlobalVariables.history.VisitedForms.Add(villages);
-            }
-            Utilities.HistoryAdd(villages);
+            Utilities.HistoryAdd(this);
             villages.Show();
-            this.Hide();
+            Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Form3 villages = new Form3(this, "ΑΞΙΟΘΕΑΤΑ");
-            Utilities.HistoryAdd(villages);
+            Utilities.HistoryAdd(this);
             villages.Show();
-            this.Hide();
+            Hide();
         }
 
         private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)

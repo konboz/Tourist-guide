@@ -39,7 +39,7 @@ namespace TouristGuide
                 GlobalVariables.connectedUser = user;
                 var sessionHistory = new UserHistory();
                 GlobalVariables.history = sessionHistory;
-                this.Hide();
+                Hide();
                 StartPage startPage = new StartPage();
                 startPage.Show(); 
             }
@@ -62,7 +62,7 @@ namespace TouristGuide
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             StartPage startPage = new StartPage();
             var user = new User();
             GlobalVariables.connectedUser = user;

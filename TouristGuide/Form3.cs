@@ -25,11 +25,19 @@ namespace TouristGuide
                 var info = new List<string>();
                 string photoDir = "Data/" + village + "/" + contentType + "/photos";
                 string infoDir = "Data/" + village + "/" + contentType + "/info";
-
-                photos = Directory.GetFiles(photoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
-                info = Directory.GetFiles(infoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
+                try
+                {
+                    photos = Directory.GetFiles(photoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
+                    info = Directory.GetFiles(infoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
+                }
+                catch(Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                    return;
+                }
+               
                 Sights sights = new Sights(this, village, contentType, photos, info);
-                Utilities.HistoryAdd(sights);
+                Utilities.HistoryAdd(this);
                 sights.Show();
                 Hide();
             }
@@ -82,8 +90,18 @@ namespace TouristGuide
             FormCreator(label3.Text);
         }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+            FormCreator(label4.Text);
+        }
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            FormCreator(label4.Text);
+        }
+
         private void ΠίσωToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Utilities.HistoryAdd(this);
             form.Show();
             Hide();
         }

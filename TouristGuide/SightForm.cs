@@ -26,6 +26,7 @@ namespace TouristGuide
 
         private void ΠίσωToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Utilities.HistoryAdd(this);
             form.Show();
             Hide();
         }
@@ -48,7 +49,16 @@ namespace TouristGuide
         private void SightForm_Load(object sender, EventArgs e)
         {
             Utilities.LoadHistoryMenu(ιστορικόToolStripMenuItem);
+        }
+
+        private void μενούToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             
+        }
+
+        private void καθαρισμόςToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Utilities.ClearHistory(ιστορικόToolStripMenuItem);
         }
     }
 }
