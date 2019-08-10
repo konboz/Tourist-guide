@@ -41,8 +41,8 @@
             this.μενούToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.πίσωToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ιστορικόToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.καθαρισμόςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.έξοδοςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.καθαρισμόςΙστορικούToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -144,9 +144,10 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label5.Location = new System.Drawing.Point(375, 23);
+            this.label5.Location = new System.Drawing.Point(374, 24);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 24);
@@ -170,6 +171,7 @@
             this.μενούToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.πίσωToolStripMenuItem,
             this.ιστορικόToolStripMenuItem,
+            this.καθαρισμόςΙστορικούToolStripMenuItem,
             this.έξοδοςToolStripMenuItem});
             this.μενούToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.μενούToolStripMenuItem.Name = "μενούToolStripMenuItem";
@@ -186,19 +188,10 @@
             // 
             // ιστορικόToolStripMenuItem
             // 
-            this.ιστορικόToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.καθαρισμόςToolStripMenuItem});
             this.ιστορικόToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.ιστορικόToolStripMenuItem.Name = "ιστορικόToolStripMenuItem";
-            this.ιστορικόToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ιστορικόToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.ιστορικόToolStripMenuItem.Text = "Ιστορικό";
-            // 
-            // καθαρισμόςToolStripMenuItem
-            // 
-            this.καθαρισμόςToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.καθαρισμόςToolStripMenuItem.Name = "καθαρισμόςToolStripMenuItem";
-            this.καθαρισμόςToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.καθαρισμόςToolStripMenuItem.Text = "Καθαρισμός";
             // 
             // έξοδοςToolStripMenuItem
             // 
@@ -206,6 +199,13 @@
             this.έξοδοςToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.έξοδοςToolStripMenuItem.Text = "Έξοδος";
             this.έξοδοςToolStripMenuItem.Click += new System.EventHandler(this.έξοδοςToolStripMenuItem_Click_1);
+            // 
+            // καθαρισμόςΙστορικούToolStripMenuItem
+            // 
+            this.καθαρισμόςΙστορικούToolStripMenuItem.Name = "καθαρισμόςΙστορικούToolStripMenuItem";
+            this.καθαρισμόςΙστορικούToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.καθαρισμόςΙστορικούToolStripMenuItem.Text = "Καθαρισμός Ιστορικού";
+            this.καθαρισμόςΙστορικούToolStripMenuItem.Click += new System.EventHandler(this.καθαρισμόςΙστορικούToolStripMenuItem_Click);
             // 
             // Form3
             // 
@@ -254,7 +254,7 @@
         private System.Windows.Forms.ToolStripMenuItem μενούToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem πίσωToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ιστορικόToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem καθαρισμόςToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem έξοδοςToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem καθαρισμόςΙστορικούToolStripMenuItem;
     }
 }

@@ -15,13 +15,13 @@ namespace TouristGuide
     {
         public Form form;
         Utilities utility = new Utilities();
-        public SightForm(Form form, Sight sight)
+        public SightForm(Form form, Location location)
         {
             InitializeComponent();
-            Text = Path.GetFileNameWithoutExtension(sight.info);
-            label1.Text = Path.GetFileNameWithoutExtension(sight.info);
-            pictureBox1.ImageLocation = sight.photo;
-            richTextBox1.Text = richTextBox1.Text = File.ReadAllText(sight.info);
+            Text = Path.GetFileNameWithoutExtension(location.info);
+            label1.Text = Path.GetFileNameWithoutExtension(location.info);
+            pictureBox1.ImageLocation = location.photo;
+            richTextBox1.Text = richTextBox1.Text = File.ReadAllText(location.info);
             this.form = form;
         }
 
@@ -36,16 +36,6 @@ namespace TouristGuide
             Application.Exit();
         }
 
-        private void ΑποθήκευσηΠληροφοριώνToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string exportLocation;
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                exportLocation = saveFileDialog1.FileName;
-                File.WriteAllText(exportLocation, richTextBox1.Text);
-            }
-        }
-
         private void SightForm_Load(object sender, EventArgs e)
         {
             Utilities.HistoryAdd(this);
@@ -58,9 +48,19 @@ namespace TouristGuide
             utility.LoadHistoryMenu(ιστορικόToolStripMenuItem);
         }
 
-        private void καθαρισμόςToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void καθαρισμόςΙστορικούToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Utilities.ClearHistory();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string exportLocation;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                exportLocation = saveFileDialog1.FileName;
+                File.WriteAllText(exportLocation, richTextBox1.Text);
+            }
         }
     }
 }

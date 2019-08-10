@@ -66,6 +66,8 @@ namespace TouristGuide
             StartPage startPage = new StartPage();
             var user = new User();
             GlobalVariables.connectedUser = user;
+            var sessionHistory = new UserHistory();
+            GlobalVariables.history = sessionHistory;
             startPage.Show();
         }
     }

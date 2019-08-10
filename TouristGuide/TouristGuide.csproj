@@ -46,10 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\HistoryUtility.cs" />
-    <Compile Include="Classes\Restaurant.cs" />
+    <Compile Include="Classes\Utilities.cs" />
     <Compile Include="GlobalVariables.cs" />
-    <Compile Include="Classes\Sight.cs" />
+    <Compile Include="Classes\Location.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +69,11 @@
     <Compile Include="SightForm.Designer.cs">
       <DependentUpon>SightForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sights.cs">
+    <Compile Include="Locations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sights.Designer.cs">
-      <DependentUpon>Sights.cs</DependentUpon>
+    <Compile Include="Locations.Designer.cs">
+      <DependentUpon>Locations.cs</DependentUpon>
     </Compile>
     <Compile Include="StartPage.cs">
       <SubType>Form</SubType>
@@ -102,8 +101,8 @@
     <EmbeddedResource Include="SightForm.resx">
       <DependentUpon>SightForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sights.resx">
-      <DependentUpon>Sights.cs</DependentUpon>
+    <EmbeddedResource Include="Locations.resx">
+      <DependentUpon>Locations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartPage.resx">
       <DependentUpon>StartPage.cs</DependentUpon>

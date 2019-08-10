@@ -20,8 +20,6 @@ namespace TouristGuide
 
         void FormCreator(string village)
         {
-            if (contentType == "ΑΞΙΟΘΕΑΤΑ")
-            {
                 var photos = new List<string>();
                 var info = new List<string>();
                 string photoDir = "Data/" + village + "/" + contentType + "/photos";
@@ -37,10 +35,9 @@ namespace TouristGuide
                     return;
                 }
                
-                Sights sights = new Sights(this, village, contentType, photos, info);               
+                Locations sights = new Locations(this, village, contentType, photos, info);               
                 sights.Show();
                 Hide();
-            }
         }
         
         public Form3(Form form, string contentType)
@@ -118,6 +115,11 @@ namespace TouristGuide
         {
             ιστορικόToolStripMenuItem.DropDownItems.Clear();
             utility.LoadHistoryMenu(ιστορικόToolStripMenuItem);
+        }
+
+        private void καθαρισμόςΙστορικούToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilities.ClearHistory();
         }
     }
 }

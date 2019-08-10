@@ -18,6 +18,11 @@ namespace TouristGuide
             InitializeComponent();
             pictureBox7.ImageLocation = "Photos/trail.jpg";
             pictureBox1.ImageLocation = "Photos/sight1.png";
+            pictureBox2.ImageLocation = "Photos/Bar.jpg";
+            pictureBox3.ImageLocation = "Photos/Restaurant.jpg";
+            pictureBox4.ImageLocation = "Photos/Beach.jpg";
+            pictureBox5.ImageLocation = "Photos/villages.jpg";
+            pictureBox6.ImageLocation = "Photos/events.jpg";
             Text = "ΑΡΧΙΚΗ ΣΕΛΙΔΑ";
         }
 
@@ -46,15 +51,78 @@ namespace TouristGuide
             Application.Exit();
         }
 
-        private void καθαρισμόςToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Utilities.ClearHistory();
-        }
 
         private void μενούToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ιστορικόToolStripMenuItem.DropDownItems.Clear();
             utility.LoadHistoryMenu(ιστορικόToolStripMenuItem);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 villages = new Form3(this, "ΔΙΑΣΚΕΔΑΣΗ");
+            villages.Show();
+            Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form3 villages = new Form3(this, "ΔΙΑΣΚΕΔΑΣΗ");
+            villages.Show();
+            Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form3 villages = new Form3(this, "ΦΑΓΗΤΟ");
+            villages.Show();
+            Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Form3 villages = new Form3(this, "ΦΑΓΗΤΟ");
+            villages.Show();
+            Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form3 villages = new Form3(this, "ΠΑΡΑΛΙΕΣ");
+            villages.Show();
+            Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Form3 villages = new Form3(this, "ΠΑΡΑΛΙΕΣ");
+            villages.Show();
+            Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+           //ΘΑ ΦΤΙΑΧΤΟΥΝ ΑΛΛΕΣ ΦΟΡΜΕΣ ΓΙΑ ΧΩΡΙΑ ΚΑΙ ΕΚΔΗΛΩΣΕΙΣ
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            //ΘΑ ΦΤΙΑΧΤΟΥΝ ΑΛΛΕΣ ΦΟΡΜΕΣ ΓΙΑ ΧΩΡΙΑ ΚΑΙ ΕΚΔΗΛΩΣΕΙΣ
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //ΘΑ ΦΤΙΑΧΤΟΥΝ ΑΛΛΕΣ ΦΟΡΜΕΣ ΓΙΑ ΧΩΡΙΑ ΚΑΙ ΕΚΔΗΛΩΣΕΙΣ
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            //ΘΑ ΦΤΙΑΧΤΟΥΝ ΑΛΛΕΣ ΦΟΡΜΕΣ ΓΙΑ ΧΩΡΙΑ ΚΑΙ ΕΚΔΗΛΩΣΕΙΣ
+        }
+
+        private void καθαρισμόςΙστορικούToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilities.ClearHistory();
         }
     }
 }
