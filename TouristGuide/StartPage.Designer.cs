@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -47,6 +48,7 @@
             this.ιστορικόToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.καθαρισμόςΙστορικούToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.έξοδοςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -247,6 +249,12 @@
             this.έξοδοςToolStripMenuItem.Text = "Έξοδος";
             this.έξοδοςToolStripMenuItem.Click += new System.EventHandler(this.έξοδοςToolStripMenuItem_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // StartPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,5 +314,6 @@
         private System.Windows.Forms.ToolStripMenuItem ιστορικόToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem έξοδοςToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem καθαρισμόςΙστορικούToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
     }
 }

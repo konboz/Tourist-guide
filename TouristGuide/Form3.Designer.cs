@@ -41,8 +41,8 @@
             this.μενούToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.πίσωToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ιστορικόToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.έξοδοςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.καθαρισμόςΙστορικούToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.έξοδοςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -182,7 +182,7 @@
             // πίσωToolStripMenuItem
             // 
             this.πίσωToolStripMenuItem.Name = "πίσωToolStripMenuItem";
-            this.πίσωToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.πίσωToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.πίσωToolStripMenuItem.Text = "Πίσω";
             this.πίσωToolStripMenuItem.Click += new System.EventHandler(this.πίσωToolStripMenuItem_Click);
             // 
@@ -193,19 +193,19 @@
             this.ιστορικόToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.ιστορικόToolStripMenuItem.Text = "Ιστορικό";
             // 
-            // έξοδοςToolStripMenuItem
-            // 
-            this.έξοδοςToolStripMenuItem.Name = "έξοδοςToolStripMenuItem";
-            this.έξοδοςToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.έξοδοςToolStripMenuItem.Text = "Έξοδος";
-            this.έξοδοςToolStripMenuItem.Click += new System.EventHandler(this.έξοδοςToolStripMenuItem_Click_1);
-            // 
             // καθαρισμόςΙστορικούToolStripMenuItem
             // 
             this.καθαρισμόςΙστορικούToolStripMenuItem.Name = "καθαρισμόςΙστορικούToolStripMenuItem";
             this.καθαρισμόςΙστορικούToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.καθαρισμόςΙστορικούToolStripMenuItem.Text = "Καθαρισμός Ιστορικού";
             this.καθαρισμόςΙστορικούToolStripMenuItem.Click += new System.EventHandler(this.καθαρισμόςΙστορικούToolStripMenuItem_Click);
+            // 
+            // έξοδοςToolStripMenuItem
+            // 
+            this.έξοδοςToolStripMenuItem.Name = "έξοδοςToolStripMenuItem";
+            this.έξοδοςToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.έξοδοςToolStripMenuItem.Text = "Έξοδος";
+            this.έξοδοςToolStripMenuItem.Click += new System.EventHandler(this.έξοδοςToolStripMenuItem_Click_1);
             // 
             // Form3
             // 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,10 @@ namespace TouristGuide
     public partial class StartPage : Form
     {
         Utilities utility = new Utilities();
+        int counter = 1;
+        string slideShowDir;
+        bool playing = false;
+
         public StartPage()
         {
             InitializeComponent();
@@ -28,8 +33,20 @@ namespace TouristGuide
 
         private void StartPage_Load(object sender, EventArgs e)
         {
+            slideShowDir = "Data/";
             Utilities.HistoryAdd(this);
             GlobalVariables.currentForm = this;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            counter++;
+            string[] images = Directory.GetFiles(slideShowDir, "*.jpg", SearchOption.AllDirectories);
+            if (counter > images.Length - 1)
+            {
+                counter = 0;
+            }
+            pictureBox7.Image = Image.FromFile(images[counter]);
         }
 
         private void button1_Click_1(object sender, EventArgs e)

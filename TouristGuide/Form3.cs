@@ -17,29 +17,29 @@ namespace TouristGuide
         public Form form;
         public string contentType;
         Utilities utility = new Utilities();
-
+        
         void FormCreator(string village)
         {
-                var photos = new List<string>();
-                var info = new List<string>();
-                string photoDir = "Data/" + village + "/" + contentType + "/photos";
-                string infoDir = "Data/" + village + "/" + contentType + "/info";
-                try
-                {
-                    photos = Directory.GetFiles(photoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
-                    info = Directory.GetFiles(infoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
-                }
-                catch(Exception e)
-                {
-                    MessageBox.Show(e.Message);
-                    return;
-                }
-               
-                Locations sights = new Locations(this, village, contentType, photos, info);               
-                sights.Show();
-                Hide();
+            var photos = new List<string>();
+            var info = new List<string>();
+            string photoDir = "Data/" + village + "/" + contentType + "/photos";
+            string infoDir = "Data/" + village + "/" + contentType + "/info";
+            try
+            {
+                photos = Directory.GetFiles(photoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
+                info = Directory.GetFiles(infoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return;
+            }
+
+            Locations sights = new Locations(this, village, contentType, photos, info);
+            sights.Show();
+            Hide();
         }
-        
+
         public Form3(Form form, string contentType)
         {
             InitializeComponent();
