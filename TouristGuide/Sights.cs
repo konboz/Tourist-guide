@@ -16,6 +16,7 @@ namespace TouristGuide
     {
         public List<Sight> sights = new List<Sight>();
         public Form form;
+        Utilities utility = new Utilities();
 
         bool UserValidation()
         {
@@ -60,7 +61,7 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[0]);
-                Utilities.HistoryAdd(this);
+                
                 sight.Show();
                 Hide();
             }
@@ -68,7 +69,8 @@ namespace TouristGuide
 
         private void Sights_Load(object sender, EventArgs e)
         {
-
+            Utilities.HistoryAdd(this);
+            GlobalVariables.currentForm = this;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -76,7 +78,7 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[1]);
-                Utilities.HistoryAdd(this);
+
                 sight.Show();
                 Hide();
             }
@@ -87,7 +89,7 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[0]);
-                Utilities.HistoryAdd(this);
+                
                 sight.Show();
                 Hide();
             }
@@ -98,7 +100,7 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[1]);
-                Utilities.HistoryAdd(this);
+                
                 sight.Show();
                 Hide();
             }
@@ -109,7 +111,7 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[2]);
-                Utilities.HistoryAdd(this);
+                
                 sight.Show();
                 Hide();
             }
@@ -120,7 +122,7 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[2]);
-                Utilities.HistoryAdd(this);
+                
                 sight.Show();
                 Hide();
             }
@@ -131,7 +133,7 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[3]);
-                Utilities.HistoryAdd(this);
+                
                 sight.Show();
                 Hide();
             }
@@ -142,7 +144,7 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[3]);
-                Utilities.HistoryAdd(this);
+                
                 sight.Show();
                 Hide();
             }
@@ -153,7 +155,7 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[4]);
-                Utilities.HistoryAdd(this);
+                
                 sight.Show();
                 Hide();
             }
@@ -164,7 +166,7 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[4]);
-                Utilities.HistoryAdd(this);
+                
                 sight.Show();
                 Hide();
             }
@@ -175,7 +177,7 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[5]);
-                Utilities.HistoryAdd(this);
+                
                 sight.Show();
                 Hide();
             }
@@ -186,20 +188,25 @@ namespace TouristGuide
             if (UserValidation())
             {
                 SightForm sight = new SightForm(this, sights[5]);
-                Utilities.HistoryAdd(this);
+                
                 sight.Show();
                 Hide();
             }
         }
 
-        private void ΠίσωToolStripMenuItem_Click(object sender, EventArgs e)
+        private void μενούToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Utilities.HistoryAdd(this);
+            ιστορικόToolStripMenuItem.DropDownItems.Clear();
+            utility.LoadHistoryMenu(ιστορικόToolStripMenuItem);
+        }
+
+        private void πίσωToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             form.Show();
             Hide();
         }
 
-        private void ΈξοδοςToolStripMenuItem_Click(object sender, EventArgs e)
+        private void έξοδοςToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

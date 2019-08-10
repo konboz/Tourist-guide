@@ -8,38 +8,56 @@ using System.Drawing;
 
 namespace TouristGuide
 {
-    public static class Utilities
+    public class Utilities
     {
-        public static void LoadHistoryMenu(ToolStripMenuItem history)
-        {
-            //int id = 0;
-     
+        public void LoadHistoryMenu(ToolStripMenuItem history)
+        { 
             foreach (Form form in GlobalVariables.history.VisitedForms)
             {
-                ToolStripMenuItem item = new ToolStripMenuItem(form.Text);
-                //item.Tag = id;
-                //id++;
-                if (!history.DropDownItems.Contains(item)) //Gia na min yparxoun diploeggrafes sto menu tou istorikou
-                {
-                    history.DropDownItems.Add(item);
-                }
+                ToolStripMenuItem item = new ToolStripMenuItem();
+                item.Text = form.Text;
+                history.DropDownItems.Add(item);
+                item.Click += new EventHandler(ClickItem);
             }
         }
 
-        public static void ClearHistory(ToolStripMenuItem history)
+        private static void ClickItem(object sender, EventArgs e)
+        {
+            ToolStripMenuItem item = sender as ToolStripMenuItem;
+            Form clickedForm = null;
+            try
+            {
+                foreach (Form form in GlobalVariables.history.VisitedForms)
+                {
+                    if (item.Text == form.Text)
+                    {
+                        clickedForm = form;
+                        break;
+                    }
+                }
+                GlobalVariables.currentForm.Hide();
+                GlobalVariables.currentForm = clickedForm;
+                clickedForm.Show();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message); ;
+            }
+        }
+
+        public static void ClearHistory()
         {
             if (GlobalVariables.history != null)
             {
                 GlobalVariables.history.VisitedForms.Clear();
             }
-            history.DropDownItems.Clear();
         }
 
         public static void HistoryAdd(Form form)
         {
             int dupCounter = 0;
-            /* if (GlobalVariables.history != null)*/ // Gia tin apofygi exception se periptvsi pou to istoriko einai adeio kai gia apofygi diploeggrafwn sti lista
-            foreach (Form element in GlobalVariables.history.VisitedForms)
+
+            foreach (Form element in GlobalVariables.history.VisitedForms) //checks if a form with the same name is in the list
             {
                 if (element.Text == form.Text)
                 {

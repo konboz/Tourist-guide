@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TouristGuide
 {
@@ -11,5 +12,7 @@ namespace TouristGuide
         public static User connectedUser;
 
         public static UserHistory history;
+
+        public static Form currentForm;
     }
 }

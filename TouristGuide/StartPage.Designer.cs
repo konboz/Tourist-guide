@@ -45,6 +45,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.μενούToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ιστορικόToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.καθαρισμόςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.έξοδοςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -208,28 +209,42 @@
             this.μενούToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ιστορικόToolStripMenuItem,
             this.έξοδοςToolStripMenuItem});
+            this.μενούToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.μενούToolStripMenuItem.Name = "μενούToolStripMenuItem";
             this.μενούToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.μενούToolStripMenuItem.Text = "Μενού";
+            this.μενούToolStripMenuItem.Click += new System.EventHandler(this.μενούToolStripMenuItem_Click);
             // 
             // ιστορικόToolStripMenuItem
             // 
+            this.ιστορικόToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.καθαρισμόςToolStripMenuItem});
+            this.ιστορικόToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.ιστορικόToolStripMenuItem.Name = "ιστορικόToolStripMenuItem";
-            this.ιστορικόToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.ιστορικόToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ιστορικόToolStripMenuItem.Text = "Ιστορικό";
+            // 
+            // καθαρισμόςToolStripMenuItem
+            // 
+            this.καθαρισμόςToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.καθαρισμόςToolStripMenuItem.Name = "καθαρισμόςToolStripMenuItem";
+            this.καθαρισμόςToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.καθαρισμόςToolStripMenuItem.Text = "Καθαρισμός";
+            this.καθαρισμόςToolStripMenuItem.Click += new System.EventHandler(this.καθαρισμόςToolStripMenuItem_Click);
             // 
             // έξοδοςToolStripMenuItem
             // 
             this.έξοδοςToolStripMenuItem.Name = "έξοδοςToolStripMenuItem";
-            this.έξοδοςToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.έξοδοςToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.έξοδοςToolStripMenuItem.Text = "Έξοδος";
-            this.έξοδοςToolStripMenuItem.Click += new System.EventHandler(this.ΈξοδοςToolStripMenuItem_Click);
+            this.έξοδοςToolStripMenuItem.Click += new System.EventHandler(this.έξοδοςToolStripMenuItem_Click);
             // 
             // StartPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 544);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -244,8 +259,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "StartPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartPage";
@@ -283,6 +296,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem μενούToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ιστορικόToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem καθαρισμόςToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem έξοδοςToolStripMenuItem;
     }
 }

@@ -16,6 +16,7 @@ namespace TouristGuide
     {
         public Form form;
         public string contentType;
+        Utilities utility = new Utilities();
 
         void FormCreator(string village)
         {
@@ -36,12 +37,12 @@ namespace TouristGuide
                     return;
                 }
                
-                Sights sights = new Sights(this, village, contentType, photos, info);
-                Utilities.HistoryAdd(this);
+                Sights sights = new Sights(this, village, contentType, photos, info);               
                 sights.Show();
                 Hide();
             }
         }
+        
         public Form3(Form form, string contentType)
         {
             InitializeComponent();
@@ -57,7 +58,8 @@ namespace TouristGuide
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            
+            Utilities.HistoryAdd(this);
+            GlobalVariables.currentForm = this;
         }
 
         private void PictureBox1_Click(object sender, EventArgs e)
@@ -99,16 +101,23 @@ namespace TouristGuide
             FormCreator(label4.Text);
         }
 
-        private void ΠίσωToolStripMenuItem_Click(object sender, EventArgs e)
+
+
+        private void έξοδοςToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Utilities.HistoryAdd(this);
+            Application.Exit();
+        }
+
+        private void πίσωToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             form.Show();
             Hide();
         }
 
-        private void ΈξοδοςToolStripMenuItem_Click(object sender, EventArgs e)
+        private void μενούToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            ιστορικόToolStripMenuItem.DropDownItems.Clear();
+            utility.LoadHistoryMenu(ιστορικόToolStripMenuItem);
         }
     }
 }

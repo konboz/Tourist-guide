@@ -14,6 +14,7 @@ namespace TouristGuide
     public partial class SightForm : Form
     {
         public Form form;
+        Utilities utility = new Utilities();
         public SightForm(Form form, Sight sight)
         {
             InitializeComponent();
@@ -26,7 +27,6 @@ namespace TouristGuide
 
         private void ΠίσωToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Utilities.HistoryAdd(this);
             form.Show();
             Hide();
         }
@@ -48,17 +48,19 @@ namespace TouristGuide
 
         private void SightForm_Load(object sender, EventArgs e)
         {
-            Utilities.LoadHistoryMenu(ιστορικόToolStripMenuItem);
+            Utilities.HistoryAdd(this);
+            GlobalVariables.currentForm = this;
         }
 
         private void μενούToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            ιστορικόToolStripMenuItem.DropDownItems.Clear();
+            utility.LoadHistoryMenu(ιστορικόToolStripMenuItem);
         }
 
         private void καθαρισμόςToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Utilities.ClearHistory(ιστορικόToolStripMenuItem);
+            Utilities.ClearHistory();
         }
     }
 }
