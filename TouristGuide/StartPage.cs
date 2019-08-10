@@ -15,7 +15,7 @@ namespace TouristGuide
     {
         Utilities utility = new Utilities();
         int counter = 1;
-        string slideShowDir;
+        string slideshowDir;
         bool playing = false;
 
         public StartPage()
@@ -33,7 +33,7 @@ namespace TouristGuide
 
         private void StartPage_Load(object sender, EventArgs e)
         {
-            slideShowDir = "Data/";
+            slideshowDir = "Data/";
             Utilities.HistoryAdd(this);
             GlobalVariables.currentForm = this;
         }
@@ -41,7 +41,7 @@ namespace TouristGuide
         private void timer1_Tick(object sender, EventArgs e)
         {
             counter++;
-            string[] images = Directory.GetFiles(slideShowDir, "*.jpg", SearchOption.AllDirectories);
+            string[] images = Directory.GetFiles(slideshowDir, "*.jpg", SearchOption.AllDirectories);
             if (counter > images.Length - 1)
             {
                 counter = 0;
