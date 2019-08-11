@@ -207,12 +207,6 @@ namespace TouristGuide
             utility.LoadHistoryMenu(ιστορικόToolStripMenuItem);
         }
 
-        private void πίσωToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            form.Show();
-            Hide();
-        }
-
         private void έξοδοςToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -221,6 +215,12 @@ namespace TouristGuide
         private void καθαρισμόςΙστορικούToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Utilities.ClearHistory();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            form.Show();
+            Hide();
         }
     }
 }

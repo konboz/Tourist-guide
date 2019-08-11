@@ -25,12 +25,6 @@ namespace TouristGuide
             this.form = form;
         }
 
-        private void ΠίσωToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            form.Show();
-            Hide();
-        }
-
         private void ΈξοδοςToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -61,6 +55,12 @@ namespace TouristGuide
                 exportLocation = saveFileDialog1.FileName;
                 File.WriteAllText(exportLocation, richTextBox1.Text);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            form.Show();
+            Hide();
         }
     }
 }

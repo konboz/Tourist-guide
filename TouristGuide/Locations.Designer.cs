@@ -43,10 +43,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.μενούToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.πίσωToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ιστορικόToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.έξοδοςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.καθαρισμόςΙστορικούToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.έξοδοςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -58,6 +58,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Location = new System.Drawing.Point(53, 67);
             this.pictureBox1.Name = "pictureBox1";
@@ -70,6 +71,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Enabled = false;
             this.pictureBox2.Location = new System.Drawing.Point(309, 67);
             this.pictureBox2.Name = "pictureBox2";
@@ -82,6 +84,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Enabled = false;
             this.pictureBox3.Location = new System.Drawing.Point(590, 67);
             this.pictureBox3.Name = "pictureBox3";
@@ -94,6 +97,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Enabled = false;
             this.pictureBox4.Location = new System.Drawing.Point(53, 261);
             this.pictureBox4.Name = "pictureBox4";
@@ -106,6 +110,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Enabled = false;
             this.pictureBox5.Location = new System.Drawing.Point(309, 261);
             this.pictureBox5.Name = "pictureBox5";
@@ -118,6 +123,7 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Enabled = false;
             this.pictureBox6.Location = new System.Drawing.Point(590, 261);
             this.pictureBox6.Name = "pictureBox6";
@@ -227,7 +233,6 @@
             // μενούToolStripMenuItem
             // 
             this.μενούToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.πίσωToolStripMenuItem,
             this.ιστορικόToolStripMenuItem,
             this.καθαρισμόςΙστορικούToolStripMenuItem,
             this.έξοδοςToolStripMenuItem});
@@ -237,39 +242,46 @@
             this.μενούToolStripMenuItem.Text = "Μενού";
             this.μενούToolStripMenuItem.Click += new System.EventHandler(this.μενούToolStripMenuItem_Click);
             // 
-            // πίσωToolStripMenuItem
-            // 
-            this.πίσωToolStripMenuItem.Name = "πίσωToolStripMenuItem";
-            this.πίσωToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.πίσωToolStripMenuItem.Text = "Πίσω";
-            this.πίσωToolStripMenuItem.Click += new System.EventHandler(this.πίσωToolStripMenuItem_Click);
-            // 
             // ιστορικόToolStripMenuItem
             // 
             this.ιστορικόToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.ιστορικόToolStripMenuItem.Name = "ιστορικόToolStripMenuItem";
-            this.ιστορικόToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.ιστορικόToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.ιστορικόToolStripMenuItem.Text = "Ιστορικό";
-            // 
-            // έξοδοςToolStripMenuItem
-            // 
-            this.έξοδοςToolStripMenuItem.Name = "έξοδοςToolStripMenuItem";
-            this.έξοδοςToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.έξοδοςToolStripMenuItem.Text = "Έξοδος";
-            this.έξοδοςToolStripMenuItem.Click += new System.EventHandler(this.έξοδοςToolStripMenuItem_Click);
             // 
             // καθαρισμόςΙστορικούToolStripMenuItem
             // 
             this.καθαρισμόςΙστορικούToolStripMenuItem.Name = "καθαρισμόςΙστορικούToolStripMenuItem";
-            this.καθαρισμόςΙστορικούToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.καθαρισμόςΙστορικούToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.καθαρισμόςΙστορικούToolStripMenuItem.Text = "Καθαρισμός Ιστορικού";
             this.καθαρισμόςΙστορικούToolStripMenuItem.Click += new System.EventHandler(this.καθαρισμόςΙστορικούToolStripMenuItem_Click);
+            // 
+            // έξοδοςToolStripMenuItem
+            // 
+            this.έξοδοςToolStripMenuItem.Name = "έξοδοςToolStripMenuItem";
+            this.έξοδοςToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.έξοδοςToolStripMenuItem.Text = "Έξοδος";
+            this.έξοδοςToolStripMenuItem.Click += new System.EventHandler(this.έξοδοςToolStripMenuItem_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(12, 27);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "Πίσω";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Locations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
@@ -317,9 +329,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem μενούToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem πίσωToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ιστορικόToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem έξοδοςToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem καθαρισμόςΙστορικούToolStripMenuItem;
+        private System.Windows.Forms.Button button2;
     }
 }

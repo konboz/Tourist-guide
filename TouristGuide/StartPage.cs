@@ -49,6 +49,35 @@ namespace TouristGuide
             pictureBox7.Image = Image.FromFile(images[counter]);
         }
 
+        //private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        //{
+        //    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+        //    pictureBox1.Cursor = Cursors.Hand;
+        //}
+
+        //private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        //{
+        //    pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+        //    pictureBox1.Cursor = Cursors.Default;
+        //}
+        private void timer_stop(object sender, EventArgs e)
+        {
+            if (timer1.Enabled)
+            {
+                timer1.Enabled = false;
+            }
+            
+        }
+        private void timer_start(object sender, EventArgs e)
+        {
+            if (!timer1.Enabled)
+            {
+                timer1.Enabled = true;
+                
+            }
+
+        }
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             Form3 villages = new Form3(this, "ΑΞΙΟΘΕΑΤΑ");
