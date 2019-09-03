@@ -147,12 +147,16 @@ namespace TouristGuide
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //ΘΑ ΦΤΙΑΧΤΟΥΝ ΑΛΛΕΣ ΦΟΡΜΕΣ ΓΙΑ ΧΩΡΙΑ ΚΑΙ ΕΚΔΗΛΩΣΕΙΣ
+            Festivals festivals = new Festivals();
+            festivals.Show();
+            Hide();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            //ΘΑ ΦΤΙΑΧΤΟΥΝ ΑΛΛΕΣ ΦΟΡΜΕΣ ΓΙΑ ΧΩΡΙΑ ΚΑΙ ΕΚΔΗΛΩΣΕΙΣ
+            Festivals festivals = new Festivals();
+            festivals.Show();
+            Hide();
         }
 
         private void καθαρισμόςΙστορικούToolStripMenuItem_Click(object sender, EventArgs e)
