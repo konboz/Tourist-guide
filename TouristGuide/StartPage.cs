@@ -16,7 +16,6 @@ namespace TouristGuide
         Utilities utility = new Utilities();
         int counter = 1;
         string slideshowDir;
-        bool playing = false;
 
         public StartPage()
         {
