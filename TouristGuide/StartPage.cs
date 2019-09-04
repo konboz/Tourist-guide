@@ -154,7 +154,9 @@ namespace TouristGuide
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            //ΘΑ ΦΤΙΑΧΤΟΥΝ ΑΛΛΕΣ ΦΟΡΜΕΣ ΓΙΑ ΧΩΡΙΑ ΚΑΙ ΕΚΔΗΛΩΣΕΙΣ
+            Calendar calendar = new Calendar();
+            calendar.Show();
+            Hide();
         }
 
         private void καθαρισμόςΙστορικούToolStripMenuItem_Click(object sender, EventArgs e)

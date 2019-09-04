@@ -53,6 +53,12 @@
       <DependentUpon>Calendar.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Utilities.cs" />
+    <Compile Include="Festivals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Festivals.Designer.cs">
+      <DependentUpon>Festivals.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlobalVariables.cs" />
     <Compile Include="Classes\Location.cs" />
     <Compile Include="Form1.cs">
@@ -97,6 +103,9 @@
     </Compile>
     <EmbeddedResource Include="Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Festivals.resx">
+      <DependentUpon>Festivals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
