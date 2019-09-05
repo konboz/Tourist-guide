@@ -146,14 +146,14 @@ namespace TouristGuide
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Calendar calendar = new Calendar();
+            Calendar calendar = new Calendar(this, "ΠΑΝΗΓΥΡΙΑ");
             calendar.Show();
             Hide();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Calendar calendar = new Calendar();
+            Calendar calendar = new Calendar(this, "ΠΑΝΗΓΥΡΙΑ");
             calendar.Show();
             Hide();
         }
