@@ -136,12 +136,16 @@ namespace TouristGuide
 
         private void button5_Click(object sender, EventArgs e)
         {
-           //ΘΑ ΦΤΙΑΧΤΟΥΝ ΑΛΛΕΣ ΦΟΡΜΕΣ ΓΙΑ ΧΩΡΙΑ ΚΑΙ ΕΚΔΗΛΩΣΕΙΣ
+            Form3 villages = new Form3(this, "ΧΩΡΙΑ");
+            villages.Show();
+            Hide();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            //ΘΑ ΦΤΙΑΧΤΟΥΝ ΑΛΛΕΣ ΦΟΡΜΕΣ ΓΙΑ ΧΩΡΙΑ ΚΑΙ ΕΚΔΗΛΩΣΕΙΣ
+            Form3 villages = new Form3(this, "ΧΩΡΙΑ");
+            villages.Show();
+            Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
