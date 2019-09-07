@@ -64,7 +64,7 @@ namespace TouristGuide
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if(groupBox1.Visible == false)
+            if (groupBox1.Visible == false)
             {
                 groupBox1.Show();
             }
@@ -115,7 +115,7 @@ namespace TouristGuide
             {
                 FormCreator(label3.Text);
             }
-            
+
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -213,6 +213,50 @@ namespace TouristGuide
         {
             form.Show();
             Hide();
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            /*
+            monthCalendar1.AnnuallyBoldedDates =
+            new DateTime[] { new DateTime(2019, 9, 5),
+                             new DateTime(2019, 6, 21),
+                             new DateTime(2019, 8, 15),
+                             new DateTime(2019, 7, 26),
+                             new DateTime(2019, 7, 1),
+                             new DateTime(2019, 7, 25),
+                             new DateTime(2019, 8, 6),
+                             new DateTime(2019, 8, 20),
+                             new DateTime(2019, 9, 14),
+                             new DateTime(2019, 11, 21)};
+             */
+
+            DateTime festival1 = new DateTime(2019, 9, 5);
+            DateTime festival2 = new DateTime(2019, 6, 21);
+            DateTime festival3 = new DateTime(2019, 8, 15);
+            DateTime festival4 = new DateTime(2019, 7, 26);
+            DateTime festival5 = new DateTime(2019, 7, 1);
+            DateTime festival6 = new DateTime(2019, 7, 25);
+            DateTime festival7 = new DateTime(2019, 8, 6);
+            DateTime festival8 = new DateTime(2019, 8, 20);
+            DateTime festival9 = new DateTime(2019, 9, 14);
+            DateTime festival10 = new DateTime(2019, 11, 21);
+
+            monthCalendar1.AddBoldedDate(festival1);
+            monthCalendar1.AddBoldedDate(festival2);
+            monthCalendar1.AddBoldedDate(festival3);
+            monthCalendar1.AddBoldedDate(festival4);
+            monthCalendar1.AddBoldedDate(festival5);
+            monthCalendar1.AddBoldedDate(festival6);
+            monthCalendar1.AddBoldedDate(festival7);
+            monthCalendar1.AddBoldedDate(festival8);
+            monthCalendar1.AddBoldedDate(festival9);
+            monthCalendar1.AddBoldedDate(festival10);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
