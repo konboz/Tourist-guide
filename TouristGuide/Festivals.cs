@@ -15,9 +15,14 @@ namespace TouristGuide
     {
         public Form form;
         Utilities utility = new Utilities();
-        public Festivals()
+        public Festivals(Form form, Location location)
         {
             InitializeComponent();
+            Text = Path.GetFileNameWithoutExtension(location.info);
+            label1.Text = Path.GetFileNameWithoutExtension(location.info);
+            pictureBox1.ImageLocation = location.photo;
+            richTextBox1.Text = richTextBox1.Text = File.ReadAllText(location.info);
+            this.form = form;
         }
 
         private void μενούtoolStripMenuItem1_Click(object sender, EventArgs e)
@@ -49,7 +54,13 @@ namespace TouristGuide
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+            string exportLocation;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                exportLocation = saveFileDialog1.FileName;
+                File.WriteAllText(exportLocation, richTextBox1.Text);
+            }
+            
         }
 
         private void Festivals_Load(object sender, EventArgs e)

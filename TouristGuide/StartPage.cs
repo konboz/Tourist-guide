@@ -150,15 +150,15 @@ namespace TouristGuide
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Calendar calendar = new Calendar(this, "ΠΑΝΗΓΥΡΙΑ");
-            calendar.Show();
+            Prefest prefest = new Prefest(this, "ΠΑΝΗΓΥΡΙΑ");
+            prefest.Show();
             Hide();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Calendar calendar = new Calendar(this, "ΠΑΝΗΓΥΡΙΑ");
-            calendar.Show();
+            Prefest prefest = new Prefest(this, "ΠΑΝΗΓΥΡΙΑ");
+            prefest.Show();
             Hide();
         }
 

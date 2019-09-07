@@ -15,11 +15,11 @@ namespace TouristGuide
 {
     public partial class Calendar : Form
     {
+        public List<Location> locations = new List<Location>();
         public Form form;
-        public string contentType;
         Utilities utility = new Utilities();
 
-        void FormCreator(string fest)
+     /*   void FormCreator(string fest)
         {
             var photos = new List<string>();
             var info = new List<string>();
@@ -40,7 +40,7 @@ namespace TouristGuide
             festivals.Show();
             Hide();
         }
-
+*/
         bool UserValidation()
         {
             if (GlobalVariables.connectedUser.Email != null)
@@ -53,24 +53,47 @@ namespace TouristGuide
                 return false;
             }
         }
-        public Calendar(Form form, string contentType)
+        public Calendar(Form form, string villageName, string contentType, List<string> photos, List<string> info)
         {
             InitializeComponent();
             this.form = form;
-            this.contentType = contentType;
-            pictureBox1.ImageLocation = "Photos/calendar.png";
-            Text = contentType;
+            Text = contentType + " - " + villageName;
+            pictureBox12.ImageLocation = "Photos/calendar.png";
+            label12.Text = contentType + " - " + villageName;
+            var labels = new List<Label> { label1, label2, label3, label4, label5 };
+            var pictures = new List<PictureBox> { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5 };
+            int i = 0;
+
+            foreach (string item in info)
+            {
+                var location = new Location();
+                try
+                {
+                    location.info = "Data/" + villageName + "/" + contentType + "/info/" + item;
+                    location.photo = "Data/" + villageName + "/" + contentType + "/photos/" + photos[i];
+                    locations.Add(location);
+                    labels[i].Visible = true;
+                    pictures[i].Enabled = true;
+                    pictures[i].Visible = true;
+                    labels[i].Text = Path.GetFileNameWithoutExtension(location.info);
+                    pictures[i].ImageLocation = location.photo;
+                    i++;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (groupBox1.Visible == false)
+            if (UserValidation())
             {
-                groupBox1.Show();
-            }
-            else
-            {
-                groupBox1.Hide();
+                Festivals festival = new Festivals(this, locations[0]);
+
+                festival.Show();
+                Hide();
             }
         }
 
@@ -113,90 +136,83 @@ namespace TouristGuide
         {
             if (UserValidation())
             {
-                FormCreator(label3.Text);
-            }
+                Festivals festival = new Festivals(this, locations[2]);
 
+                festival.Show();
+                Hide();
+            }
+            /*  if (UserValidation())
+              {
+                  FormCreator(label3.Text);
+              }
+              */
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
             if (UserValidation())
             {
-                FormCreator(label5.Text);
+                Festivals festival = new Festivals(this, locations[4]);
+
+                festival.Show();
+                Hide();
             }
+            /*  if (UserValidation())
+              {
+                  FormCreator(label5.Text);
+              }
+              */
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
             if (UserValidation())
             {
-                FormCreator(label4.Text);
+                Festivals festival = new Festivals(this, locations[3]);
+
+                festival.Show();
+                Hide();
             }
+            /*   if (UserValidation())
+               {
+                   FormCreator(label4.Text);
+               }
+               */
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
             if (UserValidation())
             {
-                FormCreator(label1.Text);
+                Festivals festival = new Festivals(this, locations[0]);
+
+                festival.Show();
+                Hide();
             }
+            /*   if (UserValidation())
+               {
+                   FormCreator(label1.Text);
+               }
+               */
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-            if (UserValidation())
-            {
-                FormCreator(label7.Text);
-            }
-        }
 
         private void label2_Click(object sender, EventArgs e)
         {
             if (UserValidation())
             {
-                FormCreator(label2.Text);
+                Festivals festival = new Festivals(this, locations[1]);
+
+                festival.Show();
+                Hide();
             }
+            /*   if (UserValidation())
+               {
+                   FormCreator(label2.Text);
+               }
+               */
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-            if (UserValidation())
-            {
-                FormCreator(label6.Text);
-            }
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-            if (UserValidation())
-            {
-                FormCreator(label8.Text);
-            }
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-            if (UserValidation())
-            {
-                FormCreator(label9.Text);
-            }
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-            if (UserValidation())
-            {
-                FormCreator(label10.Text);
-            }
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-            if (UserValidation())
-            {
-                FormCreator(label11.Text);
-            }
-        }
 
         private void μενούtoolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -230,7 +246,7 @@ namespace TouristGuide
                              new DateTime(2019, 9, 14),
                              new DateTime(2019, 11, 21)};
              */
-
+             
             DateTime festival1 = new DateTime(2019, 9, 5);
             DateTime festival2 = new DateTime(2019, 6, 21);
             DateTime festival3 = new DateTime(2019, 8, 15);
@@ -242,21 +258,79 @@ namespace TouristGuide
             DateTime festival9 = new DateTime(2019, 9, 14);
             DateTime festival10 = new DateTime(2019, 11, 21);
 
-            monthCalendar1.AddBoldedDate(festival1);
-            monthCalendar1.AddBoldedDate(festival2);
-            monthCalendar1.AddBoldedDate(festival3);
-            monthCalendar1.AddBoldedDate(festival4);
-            monthCalendar1.AddBoldedDate(festival5);
-            monthCalendar1.AddBoldedDate(festival6);
-            monthCalendar1.AddBoldedDate(festival7);
-            monthCalendar1.AddBoldedDate(festival8);
-            monthCalendar1.AddBoldedDate(festival9);
-            monthCalendar1.AddBoldedDate(festival10);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
+            monthCalendar1.AddAnnuallyBoldedDate(festival1);
+            monthCalendar1.AddAnnuallyBoldedDate(festival2);
+            monthCalendar1.AddAnnuallyBoldedDate(festival3);
+            monthCalendar1.AddAnnuallyBoldedDate(festival4);
+            monthCalendar1.AddAnnuallyBoldedDate(festival5);
+            monthCalendar1.AddAnnuallyBoldedDate(festival6);
+            monthCalendar1.AddAnnuallyBoldedDate(festival7);
+            monthCalendar1.AddAnnuallyBoldedDate(festival8);
+            monthCalendar1.AddAnnuallyBoldedDate(festival9);
+            monthCalendar1.AddAnnuallyBoldedDate(festival10);
             
         }
+        
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(monthCalendar1.SelectionStart.Day.ToString("Panhgiri"));
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            if (groupBox1.Visible == false)
+            {
+                groupBox1.Show();
+            }
+            else
+            {
+                groupBox1.Hide();
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (UserValidation())
+            {
+                Festivals festival = new Festivals(this, locations[1]);
+
+                festival.Show();
+                Hide();
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (UserValidation())
+            {
+                Festivals festival = new Festivals(this, locations[2]);
+
+                festival.Show();
+                Hide();
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (UserValidation())
+            {
+                Festivals festival = new Festivals(this, locations[3]);
+
+                festival.Show();
+                Hide();
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            if (UserValidation())
+            {
+                Festivals festival = new Festivals(this, locations[4]);
+
+                festival.Show();
+                Hide();
+            }
+        }
+
     }
 }
