@@ -199,12 +199,14 @@
             this.καθαρισμόςΙστορικούtoolStripMenuItem3.Name = "καθαρισμόςΙστορικούtoolStripMenuItem3";
             this.καθαρισμόςΙστορικούtoolStripMenuItem3.Size = new System.Drawing.Size(195, 22);
             this.καθαρισμόςΙστορικούtoolStripMenuItem3.Text = "Καθαρισμός Ιστορικού";
+            this.καθαρισμόςΙστορικούtoolStripMenuItem3.Click += new System.EventHandler(this.καθαρισμόςΙστορικούtoolStripMenuItem3_Click);
             // 
             // έξοδοςtoolStripMenuItem4
             // 
             this.έξοδοςtoolStripMenuItem4.Name = "έξοδοςtoolStripMenuItem4";
             this.έξοδοςtoolStripMenuItem4.Size = new System.Drawing.Size(195, 22);
             this.έξοδοςtoolStripMenuItem4.Text = "Έξοδος";
+            this.έξοδοςtoolStripMenuItem4.Click += new System.EventHandler(this.έξοδοςtoolStripMenuItem4_Click);
             // 
             // Prefest
             // 

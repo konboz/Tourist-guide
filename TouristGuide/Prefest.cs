@@ -51,16 +51,7 @@ namespace TouristGuide
             Text = contentType;
             label5.Text = contentType;
         }
-
-        private void καθαρισμόςΙστορικούToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Utilities.ClearHistory();
-        }
-
-        private void έξοδοςToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -118,6 +109,16 @@ namespace TouristGuide
         {
             ιστορικόtoolStripMenuItem2.DropDownItems.Clear();
             utility.LoadHistoryMenu(ιστορικόtoolStripMenuItem2);
+        }
+
+        private void καθαρισμόςΙστορικούtoolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Utilities.ClearHistory();
+        }
+
+        private void έξοδοςtoolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
