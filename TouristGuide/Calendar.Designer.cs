@@ -111,8 +111,10 @@
             this.pictureBox1.Location = new System.Drawing.Point(411, 543);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(204, 147);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBox1
@@ -174,6 +176,7 @@
             this.label1.Size = new System.Drawing.Size(47, 15);
             this.label1.TabIndex = 4;
             this.label1.Text = "label1";
+            this.label1.Visible = false;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -188,6 +191,7 @@
             this.label2.Size = new System.Drawing.Size(47, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "label2";
+            this.label2.Visible = false;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -202,6 +206,7 @@
             this.label3.Size = new System.Drawing.Size(47, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "label3";
+            this.label3.Visible = false;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
@@ -216,6 +221,7 @@
             this.label4.Size = new System.Drawing.Size(47, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "label4";
+            this.label4.Visible = false;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label12
@@ -260,8 +266,10 @@
             this.pictureBox2.Location = new System.Drawing.Point(46, 543);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(204, 147);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
@@ -272,8 +280,10 @@
             this.pictureBox3.Location = new System.Drawing.Point(766, 543);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(205, 147);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
@@ -284,8 +294,10 @@
             this.pictureBox4.Location = new System.Drawing.Point(1098, 543);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(205, 147);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 20;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Visible = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox12
