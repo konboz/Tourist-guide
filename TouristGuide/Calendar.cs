@@ -60,8 +60,8 @@ namespace TouristGuide
             Text = contentType + " - " + villageName;
             pictureBox12.ImageLocation = "Photos/calendar.png";
             label12.Text = contentType + " - " + villageName;
-            var labels = new List<Label> { label1, label2, label3, label4, label5 };
-            var pictures = new List<PictureBox> { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5 };
+            var labels = new List<Label> { label1, label2, label3, label4 };
+            var pictures = new List<PictureBox> { pictureBox1, pictureBox2, pictureBox3, pictureBox4 };
             int i = 0;
 
             foreach (string item in info)
@@ -107,6 +107,7 @@ namespace TouristGuide
             SoundPlayer sp = new SoundPlayer();
             sp.SoundLocation = "Sounds/sound.wav";
             sp.PlayLooping();
+            
 
             Utilities.HistoryAdd(this);
             GlobalVariables.currentForm = this;
@@ -144,22 +145,6 @@ namespace TouristGuide
             /*  if (UserValidation())
               {
                   FormCreator(label3.Text);
-              }
-              */
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            if (UserValidation())
-            {
-                Festivals festival = new Festivals(this, locations[4]);
-
-                festival.Show();
-                Hide();
-            }
-            /*  if (UserValidation())
-              {
-                  FormCreator(label5.Text);
               }
               */
         }
@@ -232,21 +217,7 @@ namespace TouristGuide
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            /*
-            monthCalendar1.AnnuallyBoldedDates =
-            new DateTime[] { new DateTime(2019, 9, 5),
-                             new DateTime(2019, 6, 21),
-                             new DateTime(2019, 8, 15),
-                             new DateTime(2019, 7, 26),
-                             new DateTime(2019, 7, 1),
-                             new DateTime(2019, 7, 25),
-                             new DateTime(2019, 8, 6),
-                             new DateTime(2019, 8, 20),
-                             new DateTime(2019, 9, 14),
-                             new DateTime(2019, 11, 21)};
-             */
-             
+        {           
             DateTime festival1 = new DateTime(2019, 9, 5);
             DateTime festival2 = new DateTime(2019, 6, 21);
             DateTime festival3 = new DateTime(2019, 8, 15);
@@ -273,7 +244,7 @@ namespace TouristGuide
         
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(monthCalendar1.SelectionStart.Day.ToString("Panhgiri"));
+            MessageBox.Show(monthCalendar1.SelectionStart.Day.ToString(" Ώρα για Πανηγύρι! "));
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
@@ -315,17 +286,6 @@ namespace TouristGuide
             if (UserValidation())
             {
                 Festivals festival = new Festivals(this, locations[3]);
-
-                festival.Show();
-                Hide();
-            }
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            if (UserValidation())
-            {
-                Festivals festival = new Festivals(this, locations[4]);
 
                 festival.Show();
                 Hide();
