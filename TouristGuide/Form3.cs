@@ -121,5 +121,11 @@ namespace TouristGuide
             form.Show();
             Hide();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
+        }
     }
 }

@@ -49,6 +49,7 @@
             this.καθαρισμόςΙστορικούToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.έξοδοςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -231,6 +232,7 @@
             this.μενούToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ιστορικόToolStripMenuItem,
             this.καθαρισμόςΙστορικούToolStripMenuItem,
+            this.aboutToolStripMenuItem,
             this.έξοδοςToolStripMenuItem});
             this.μενούToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.μενούToolStripMenuItem.Name = "μενούToolStripMenuItem";
@@ -264,6 +266,13 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 2500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // StartPage
             // 
@@ -325,5 +334,6 @@
         private System.Windows.Forms.ToolStripMenuItem έξοδοςToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem καθαρισμόςΙστορικούToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }

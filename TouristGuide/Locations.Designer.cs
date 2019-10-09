@@ -47,6 +47,7 @@
             this.καθαρισμόςΙστορικούToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.έξοδοςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -235,6 +236,7 @@
             this.μενούToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ιστορικόToolStripMenuItem,
             this.καθαρισμόςΙστορικούToolStripMenuItem,
+            this.aboutToolStripMenuItem,
             this.έξοδοςToolStripMenuItem});
             this.μενούToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.μενούToolStripMenuItem.Name = "μενούToolStripMenuItem";
@@ -275,6 +277,13 @@
             this.button2.Text = "Πίσω";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // Locations
             // 
@@ -333,5 +342,6 @@
         private System.Windows.Forms.ToolStripMenuItem έξοδοςToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem καθαρισμόςΙστορικούToolStripMenuItem;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }

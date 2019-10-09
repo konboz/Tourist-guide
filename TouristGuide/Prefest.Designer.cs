@@ -43,6 +43,7 @@
             this.ιστορικόtoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.καθαρισμόςΙστορικούtoolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.έξοδοςtoolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -187,6 +188,7 @@
             this.μενούtoolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ιστορικόtoolStripMenuItem2,
             this.καθαρισμόςΙστορικούtoolStripMenuItem3,
+            this.aboutToolStripMenuItem,
             this.έξοδοςtoolStripMenuItem4});
             this.μενούtoolStripMenuItem1.Name = "μενούtoolStripMenuItem1";
             this.μενούtoolStripMenuItem1.Size = new System.Drawing.Size(55, 20);
@@ -213,6 +215,13 @@
             this.έξοδοςtoolStripMenuItem4.Text = "Έξοδος";
             this.έξοδοςtoolStripMenuItem4.Click += new System.EventHandler(this.έξοδοςtoolStripMenuItem4_Click);
             // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // Prefest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +239,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Prefest";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prefest";
             this.Load += new System.EventHandler(this.Prefest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -260,5 +270,6 @@
         private System.Windows.Forms.ToolStripMenuItem ιστορικόtoolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem καθαρισμόςΙστορικούtoolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem έξοδοςtoolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }

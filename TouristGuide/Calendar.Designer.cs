@@ -33,6 +33,7 @@
             this.μενούtoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ιστορικόtoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.καθαρισμόςΙστορικούtoolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.έξοδοςtoolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -75,6 +76,7 @@
             this.μενούtoolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ιστορικόtoolStripMenuItem2,
             this.καθαρισμόςΙστορικούtoolStripMenuItem3,
+            this.aboutToolStripMenuItem,
             this.έξοδοςtoolStripMenuItem4});
             this.μενούtoolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.μενούtoolStripMenuItem1.ForeColor = System.Drawing.Color.OrangeRed;
@@ -95,6 +97,13 @@
             this.καθαρισμόςΙστορικούtoolStripMenuItem3.Size = new System.Drawing.Size(208, 22);
             this.καθαρισμόςΙστορικούtoolStripMenuItem3.Text = "Καθαρισμός Ιστορικού";
             this.καθαρισμόςΙστορικούtoolStripMenuItem3.Click += new System.EventHandler(this.καθαρισμόςΙστορικούtoolStripMenuItem3_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // έξοδοςtoolStripMenuItem4
             // 
@@ -335,6 +344,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Calendar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calendar";
             this.Load += new System.EventHandler(this.Calendar_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -373,5 +383,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }

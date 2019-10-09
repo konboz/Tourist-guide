@@ -119,5 +119,11 @@ namespace TouristGuide
         {
             FormCreator(label4.Text);
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
+        }
     }
 }

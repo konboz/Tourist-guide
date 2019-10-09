@@ -21,7 +21,7 @@ namespace TouristGuide
             Text = Path.GetFileNameWithoutExtension(location.info);
             label1.Text = Path.GetFileNameWithoutExtension(location.info);
             pictureBox1.ImageLocation = location.photo;
-            richTextBox1.Text = richTextBox1.Text = File.ReadAllText(location.info);
+            richTextBox1.Text = File.ReadAllText(location.info);
             this.form = form;
         }
 
@@ -61,6 +61,12 @@ namespace TouristGuide
         {
             form.Show();
             Hide();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
         }
     }
 }
