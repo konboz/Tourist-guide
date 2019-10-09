@@ -11,7 +11,7 @@ using System.IO;
 
 namespace TouristGuide
 {
-    public partial class Festivals: Form
+    public partial class Festivals : Form
     {
         public Form form;
         Utilities utility = new Utilities();
@@ -33,7 +33,7 @@ namespace TouristGuide
 
         private void ιστορικόtoolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void καθαρισμόςΙστορικούtoolStripMenuItem3_Click(object sender, EventArgs e)
@@ -58,9 +58,17 @@ namespace TouristGuide
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 exportLocation = saveFileDialog1.FileName;
-                File.WriteAllText(exportLocation, richTextBox1.Text);
+                try
+                {
+                    File.WriteAllText(exportLocation, richTextBox1.Text);
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show(exc.Message);
+                    return;
+                }
             }
-            
+
         }
 
         private void Festivals_Load(object sender, EventArgs e)

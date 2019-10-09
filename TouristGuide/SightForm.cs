@@ -18,10 +18,18 @@ namespace TouristGuide
         public SightForm(Form form, Location location)
         {
             InitializeComponent();
-            Text = Path.GetFileNameWithoutExtension(location.info);
-            label1.Text = Path.GetFileNameWithoutExtension(location.info);
-            pictureBox1.ImageLocation = location.photo;
-            richTextBox1.Text = File.ReadAllText(location.info);
+            try
+            {
+                Text = Path.GetFileNameWithoutExtension(location.info);
+                label1.Text = Path.GetFileNameWithoutExtension(location.info);
+                pictureBox1.ImageLocation = location.photo;
+                richTextBox1.Text = File.ReadAllText(location.info);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+                return;
+            }
             this.form = form;
         }
 
@@ -53,7 +61,15 @@ namespace TouristGuide
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 exportLocation = saveFileDialog1.FileName;
-                File.WriteAllText(exportLocation, richTextBox1.Text);
+                try
+                {
+                    File.WriteAllText(exportLocation, richTextBox1.Text);
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show(exc.Message);
+                    return;
+                }
             }
         }
 

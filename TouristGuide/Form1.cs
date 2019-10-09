@@ -24,29 +24,39 @@ namespace TouristGuide
         {
             string email = textBox1.Text;
             string password = textBox2.Text;
-            connection.Open();
-            string query = "SELECT * FROM Visitor WHERE Email LIKE(\"" + email + "\") AND Password LIKE(\"" + password + "\")";
-            OleDbCommand command = new OleDbCommand(query, connection);
-            OleDbDataReader reader = command.ExecuteReader();
+            try
+            {
+                connection.Open();
+                string query = "SELECT * FROM Visitor WHERE Email LIKE(\"" + email + "\") AND Password LIKE(\"" + password + "\")";
+                OleDbCommand command = new OleDbCommand(query, connection);
+                OleDbDataReader reader = command.ExecuteReader();
 
-            if (reader.HasRows)
-            {
-                connection.Close();
-                var user = new User()
+                if (reader.HasRows)
                 {
-                    Email = email
-                };
-                GlobalVariables.connectedUser = user;
-                var sessionHistory = new UserHistory();
-                GlobalVariables.history = sessionHistory;
-                Hide();
-                StartPage startPage = new StartPage();
-                startPage.Show(); 
+                    connection.Close();
+                    var user = new User()
+                    {
+                        Email = email
+                    };
+                    GlobalVariables.connectedUser = user;
+                    var sessionHistory = new UserHistory();
+                    GlobalVariables.history = sessionHistory;
+                    Hide();
+                    StartPage startPage = new StartPage();
+                    startPage.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong email and/or password!");
+                    connection.Close();
+                }
             }
-            else
+            catch (Exception exc)
             {
-                MessageBox.Show("Wrong email and/or password!");
-                connection.Close();
+                {
+                    MessageBox.Show(exc.Message);
+                    return;
+                }
             }
         }
 

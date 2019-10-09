@@ -40,12 +40,20 @@ namespace TouristGuide
         private void timer1_Tick(object sender, EventArgs e)
         {
             counter++;
-            string[] images = Directory.GetFiles(slideshowDir, "*.jpg", SearchOption.AllDirectories);
-            if (counter > images.Length - 1)
+            try
             {
-                counter = 0;
+                string[] images = Directory.GetFiles(slideshowDir, "*.jpg", SearchOption.AllDirectories);
+                if (counter > images.Length - 1)
+                {
+                    counter = 0;
+                }
+                pictureBox7.Image = Image.FromFile(images[counter]);
             }
-            pictureBox7.Image = Image.FromFile(images[counter]);
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+                return;
+            }
         }
 
         private void timer_stop(object sender, EventArgs e)
@@ -54,14 +62,14 @@ namespace TouristGuide
             {
                 timer1.Enabled = false;
             }
-            
+
         }
         private void timer_start(object sender, EventArgs e)
         {
             if (!timer1.Enabled)
             {
                 timer1.Enabled = true;
-                
+
             }
 
         }
