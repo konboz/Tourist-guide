@@ -20,28 +20,6 @@ namespace TouristGuide
         Utilities utility = new Utilities();
         SoundPlayer sp = new SoundPlayer();       
 
-     /*   void FormCreator(string fest)
-        {
-            var photos = new List<string>();
-            var info = new List<string>();
-            string photoDir = "Festivals/" + contentType + "/photos";
-            string infoDir = "Festivals/" + contentType + "/info";
-            try
-            {
-                photos = Directory.GetFiles(photoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
-                info = Directory.GetFiles(infoDir, "*", SearchOption.AllDirectories).Select(x => Path.GetFileName(x)).ToList();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-                return;
-            }
-
-            Festivals festivals = new Festivals();
-            festivals.Show();
-            Hide();
-        }
-*/
         bool UserValidation()
         {
             if (GlobalVariables.connectedUser.Email != null)
@@ -138,11 +116,6 @@ namespace TouristGuide
                 sp.Stop();
                 Hide();
             }
-            /*  if (UserValidation())
-              {
-                  FormCreator(label3.Text);
-              }
-              */
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -155,11 +128,6 @@ namespace TouristGuide
                 sp.Stop();
                 Hide();
             }
-            /*   if (UserValidation())
-               {
-                   FormCreator(label4.Text);
-               }
-               */
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -172,11 +140,6 @@ namespace TouristGuide
                 sp.Stop();
                 Hide();
             }
-            /*   if (UserValidation())
-               {
-                   FormCreator(label1.Text);
-               }
-               */
         }
 
 
@@ -190,11 +153,6 @@ namespace TouristGuide
                 sp.Stop();
                 Hide();
             }
-            /*   if (UserValidation())
-               {
-                   FormCreator(label2.Text);
-               }
-               */
         }
 
 
