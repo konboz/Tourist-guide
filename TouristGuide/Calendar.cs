@@ -18,6 +18,7 @@ namespace TouristGuide
         public List<Location> locations = new List<Location>();
         public Form form;
         Utilities utility = new Utilities();
+        SoundPlayer sp = new SoundPlayer();       
 
      /*   void FormCreator(string fest)
         {
@@ -62,6 +63,7 @@ namespace TouristGuide
             label12.Text = contentType + " - " + villageName;
             var labels = new List<Label> { label1, label2, label3, label4 };
             var pictures = new List<PictureBox> { pictureBox1, pictureBox2, pictureBox3, pictureBox4 };
+            sp.SoundLocation = "Sounds/sound.wav";
             int i = 0;
 
             foreach (string item in info)
@@ -103,20 +105,15 @@ namespace TouristGuide
         }
 
         private void Calendar_Load(object sender, EventArgs e)
-        {
-            SoundPlayer sp = new SoundPlayer();
-            sp.SoundLocation = "Sounds/sound.wav";
+        {           
             sp.PlayLooping();
             
-
             Utilities.HistoryAdd(this);
             GlobalVariables.currentForm = this;
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            SoundPlayer sp = new SoundPlayer();
-            sp.SoundLocation = "Sounds/sound.wav";
+        {           
             sp.PlayLooping();
 
             button2.Visible = false;
@@ -124,9 +121,7 @@ namespace TouristGuide
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {
-            SoundPlayer sp = new SoundPlayer();
-            sp.SoundLocation = "Sounds/sound.wav";
+        {           
             sp.Stop();
 
             button3.Visible = false;
@@ -140,6 +135,7 @@ namespace TouristGuide
                 Festivals festival = new Festivals(this, locations[2]);
 
                 festival.Show();
+                sp.Stop();
                 Hide();
             }
             /*  if (UserValidation())
@@ -156,6 +152,7 @@ namespace TouristGuide
                 Festivals festival = new Festivals(this, locations[3]);
 
                 festival.Show();
+                sp.Stop();
                 Hide();
             }
             /*   if (UserValidation())
@@ -172,6 +169,7 @@ namespace TouristGuide
                 Festivals festival = new Festivals(this, locations[0]);
 
                 festival.Show();
+                sp.Stop();
                 Hide();
             }
             /*   if (UserValidation())
@@ -189,6 +187,7 @@ namespace TouristGuide
                 Festivals festival = new Festivals(this, locations[1]);
 
                 festival.Show();
+                sp.Stop();
                 Hide();
             }
             /*   if (UserValidation())
@@ -213,6 +212,7 @@ namespace TouristGuide
         private void button1_Click(object sender, EventArgs e)
         {
             form.Show();
+            sp.Stop();
             Hide();
         }
 
@@ -266,6 +266,7 @@ namespace TouristGuide
                 Festivals festival = new Festivals(this, locations[1]);
 
                 festival.Show();
+                sp.Stop();
                 Hide();
             }
         }
@@ -277,6 +278,7 @@ namespace TouristGuide
                 Festivals festival = new Festivals(this, locations[2]);
 
                 festival.Show();
+                sp.Stop();
                 Hide();
             }
         }
@@ -288,6 +290,7 @@ namespace TouristGuide
                 Festivals festival = new Festivals(this, locations[3]);
 
                 festival.Show();
+                sp.Stop();
                 Hide();
             }
         }
