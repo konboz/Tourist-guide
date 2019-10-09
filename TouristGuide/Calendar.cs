@@ -71,7 +71,7 @@ namespace TouristGuide
             if (UserValidation())
             {
                 Festivals festival = new Festivals(this, locations[0]);
-
+                sp.Stop();
                 festival.Show();
                 Hide();
             }
@@ -84,8 +84,7 @@ namespace TouristGuide
 
         private void Calendar_Load(object sender, EventArgs e)
         {           
-            sp.PlayLooping();
-            
+            sp.PlayLooping();          
             Utilities.HistoryAdd(this);
             GlobalVariables.currentForm = this;
         }
@@ -93,7 +92,6 @@ namespace TouristGuide
         private void button2_Click(object sender, EventArgs e)
         {           
             sp.PlayLooping();
-
             button2.Visible = false;
             button3.Visible = true;
         }
@@ -101,7 +99,6 @@ namespace TouristGuide
         private void button3_Click(object sender, EventArgs e)
         {           
             sp.Stop();
-
             button3.Visible = false;
             button2.Visible = true;
         }
@@ -111,7 +108,6 @@ namespace TouristGuide
             if (UserValidation())
             {
                 Festivals festival = new Festivals(this, locations[2]);
-
                 festival.Show();
                 sp.Stop();
                 Hide();
@@ -123,7 +119,6 @@ namespace TouristGuide
             if (UserValidation())
             {
                 Festivals festival = new Festivals(this, locations[3]);
-
                 festival.Show();
                 sp.Stop();
                 Hide();
@@ -135,7 +130,6 @@ namespace TouristGuide
             if (UserValidation())
             {
                 Festivals festival = new Festivals(this, locations[0]);
-
                 festival.Show();
                 sp.Stop();
                 Hide();
@@ -148,7 +142,6 @@ namespace TouristGuide
             if (UserValidation())
             {
                 Festivals festival = new Festivals(this, locations[1]);
-
                 festival.Show();
                 sp.Stop();
                 Hide();
@@ -222,7 +215,6 @@ namespace TouristGuide
             if (UserValidation())
             {
                 Festivals festival = new Festivals(this, locations[1]);
-
                 festival.Show();
                 sp.Stop();
                 Hide();
@@ -234,7 +226,6 @@ namespace TouristGuide
             if (UserValidation())
             {
                 Festivals festival = new Festivals(this, locations[2]);
-
                 festival.Show();
                 sp.Stop();
                 Hide();
@@ -246,7 +237,6 @@ namespace TouristGuide
             if (UserValidation())
             {
                 Festivals festival = new Festivals(this, locations[3]);
-
                 festival.Show();
                 sp.Stop();
                 Hide();
