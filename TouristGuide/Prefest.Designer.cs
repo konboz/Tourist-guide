@@ -85,6 +85,7 @@
             this.label4.Size = new System.Drawing.Size(115, 20);
             this.label4.TabIndex = 18;
             this.label4.Text = "ΚΑΤΩ ΜΕΡΙΑ";
+            this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // label3
             // 
@@ -96,6 +97,7 @@
             this.label3.Size = new System.Drawing.Size(81, 20);
             this.label3.TabIndex = 17;
             this.label3.Text = "ΑΙΓΙΑΛΗ";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // label2
             // 
@@ -132,6 +134,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
             // 
             // pictureBox3
             // 
@@ -143,6 +146,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
             // 
             // pictureBox2
             // 

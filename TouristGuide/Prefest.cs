@@ -52,27 +52,6 @@ namespace TouristGuide
             label5.Text = contentType;
         }
         
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            FormCreator(label4.Text);
-        }
-
-        private void Label3_Click(object sender, EventArgs e)
-        {
-            FormCreator(label3.Text);
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            FormCreator(label4.Text);
-        }
-
-        private void PictureBox3_Click(object sender, EventArgs e)
-        {
-            FormCreator(label3.Text);
-        }
-
         private void Prefest_Load(object sender, EventArgs e)
         {
             Utilities.HistoryAdd(this);
@@ -119,6 +98,26 @@ namespace TouristGuide
         private void έξοδοςtoolStripMenuItem4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            FormCreator(label3.Text);
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+            FormCreator(label3.Text);
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            FormCreator(label4.Text);
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+            FormCreator(label4.Text);
         }
     }
 }
